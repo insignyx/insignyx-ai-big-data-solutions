@@ -1,0 +1,14 @@
+/* Custom styles for dropdown menus and other components */
+
+.group:hover .group-hover\\:opacity-100 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.group-hover\\:opacity-100 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Additional custom styles can be added here */
