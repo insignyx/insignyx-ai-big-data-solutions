@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hero - Insignyx</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body class="bg-white font-sans text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="hero.html" class="text-2xl font-bold text-black">insignyx</a>
+      <nav>
+        <ul class="flex space-x-8">
+          <li class="relative">
+            <button class="font-semibold hover:text-green-600">Services</button>
+            <!-- Dropdown -->
+            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4">
+              <div>
+                <h3 class="font-bold mb-2">Discover</h3>
+                <ul class="space-y-1 text-sm">
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Consulting</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Big Data Consulting</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Consulting</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Organize data</h3>
+                <ul class="space-y-1 text-sm">
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Business Intelligence Services</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Data Engineering Services</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Databricks Deployment Services</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Develop</h3>
+                <ul class="space-y-1 text-sm">
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Proof of Concept (PoC)</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Development Company</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">LLMs Development</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">Machine Learning Consulting</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Deploy</h3>
+                <ul class="space-y-1 text-sm">
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Integration Services</a></li>
+                  <li><a href="core-capabilities.html" class="hover:text-green-600">MLOps Consulting</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="solutions.html" class="font-semibold hover:text-green-600">Solutions</a></li>
+          <li><a href="products.html" class="font-semibold hover:text-green-600">Products</a></li>
+          <li><a href="about.html" class="font-semibold hover:text-green-600">About</a></li>
+          <li><a href="resources.html" class="font-semibold hover:text-green-600">Resources</a></li>
+          <li><a href="case-studies.html" class="font-semibold hover:text-green-600">Case studies</a></li>
+          <li><a href="career.html" class="font-semibold hover:text-green-600">Career</a></li>
+          <li><a href="contact.html" class="font-semibold hover:text-green-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen overflow-hidden bg-gray-900">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+      <source src="https://cdn.pixabay.com/vimeo/458022091/Technology%20Background%20-%201-1080p-1-0f7e7e0e.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="container mx-auto relative z-10 flex flex-col justify-center h-full px-6 text-white">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">AI Solution provider & Big Data Experts Company</h1>
+      <hr class="border-green-500 border-2 w-24 mb-4" />
+      <p class="text-3xl md:text-5xl font-extrabold mb-8">Driving changes through <br />AI & Data solutions</p>
+      <div class="flex space-x-4">
+        <a href="case-studies.html" class="bg-transparent border border-white text-white py-3 px-6 rounded hover:bg-white hover:text-black transition">Read case studies</a>
+        <a href="contact.html" class="bg-green-600 py-3 px-6 rounded hover:bg-green-700 transition">Let’s talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!--#include virtual="footer.html" -->
+
+</body>
+</html>
