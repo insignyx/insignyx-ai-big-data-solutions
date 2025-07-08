@@ -1,3 +1,5 @@
+console.log("Script loaded");
+
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle (if implemented later)
   const menuToggle = document.querySelector('.menu-toggle');
@@ -43,5 +45,51 @@ document.addEventListener('DOMContentLoaded', () => {
         div.style.pointerEvents = 'none';
       });
     }
+  });
+
+  // JavaScript-based navigation for SPA-like behavior
+  const contentContainer = document.getElementById('content-container') || document.createElement('div');
+  contentContainer.id = 'content-container';
+  if (!document.getElementById('content-container')) {
+    document.body.appendChild(contentContainer);
+  }
+
+  const pages = {
+    'hero.html': 'hero.html',
+    'core-capabilities.html': 'core-capabilities.html',
+    'clients.html': 'clients.html',
+    'customer-stories.html': 'customer-stories.html',
+    'index.html': 'index.html'
+  };
+
+  async function loadPage(page) {
+    if (!pages[page]) return;
+    const response = await fetch(pages[page]);
+    const text = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const mainContent = doc.querySelector('body > section, body > div#content-container');
+    if (mainContent) {
+      contentContainer.innerHTML = '';
+      contentContainer.appendChild(mainContent.cloneNode(true));
+    }
+  }
+
+  // Intercept link clicks
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      loadPage(href);
+      history.pushState(null, '', href);
+    });
+  });
+
+  // Load initial page content
+  loadPage('hero.html');
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    loadPage(location.pathname.substring(1) || 'hero.html');
   });
 });
