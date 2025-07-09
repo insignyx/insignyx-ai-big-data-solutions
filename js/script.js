@@ -59,7 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
     'core-capabilities.html': 'core-capabilities.html',
     'clients.html': 'clients.html',
     'customer-stories.html': 'customer-stories.html',
-    'index.html': 'index.html'
+    'index.html': 'index.html',
+    'solutions.html': 'solutions.html',
+    'products.html': 'products.html',
+    'about.html': 'about.html',
+    'resources.html': 'resources.html',
+    'case-studies.html': 'case-studies.html',
+    'career.html': 'career.html',
+    'contact.html': 'contact.html',
+    'blog.html': 'blog.html',
+    'whitepapers.html': 'whitepapers.html'
   };
 
   async function loadPage(page) {
