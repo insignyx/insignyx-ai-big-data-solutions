@@ -2,80 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About - Insignyx</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <title>About Us | Insignyx AI & Big Data Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-white font-sans text-gray-900">
-
-
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="hero.html" class="text-2xl font-bold text-black">insignyx</a>
+<body class="bg-gradient-to-b from-blue-50 via-purple-50 to-white text-gray-900">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-extrabold text-2xl text-blue-700 tracking-wide">
+        <img src="https://ui-avatars.com/api/?name=Insignyx&background=3b82f6&color=fff&size=64"
+             alt="Brand Logo" class="w-10 h-10 rounded-lg shadow-md inline mr-2 align-middle">
+        Insignyx
+      </a>
       <nav>
-        <ul class="flex space-x-8">
-          <li class="relative">
-            <button class="font-semibold hover:text-green-600">Services</button>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="font-bold mb-2">Discover</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Big Data Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Organize data</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Business Intelligence Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Data Engineering Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Databricks Deployment Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Develop</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Proof of Concept (PoC)</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Development Company</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">LLMs Development</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Machine Learning Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Deploy</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Integration Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">MLOps Consulting</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="solutions.html" class="font-semibold hover:text-green-600">Solutions</a></li>
-          <li><a href="products.html" class="font-semibold hover:text-green-600">Products</a></li>
-          <li><a href="about.html" class="font-semibold hover:text-green-600">About</a></li>
-          <li><a href="resources.html" class="font-semibold hover:text-green-600">Resources</a></li>
-          <li><a href="case-studies.html" class="font-semibold hover:text-green-600">Case studies</a></li>
-          <li><a href="career.html" class="font-semibold hover:text-green-600">Career</a></li>
-          <li><a href="contact.html" class="font-semibold hover:text-green-600">Contact</a></li>
+        <ul class="flex gap-6 items-center font-semibold text-gray-700">
+          <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+          <li><a href="solutions.html" class="hover:text-blue-600 transition">Solutions</a></li>
+          <li><a href="products.html" class="hover:text-blue-600 transition">Products</a></li>
+          <li><a href="about.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">About</a></li>
+          <li><a href="resources.html" class="hover:text-blue-600 transition">Resources</a></li>
+          <li><a href="case-studies.html" class="hover:text-blue-600 transition">Case Studies</a></li>
+          <li><a href="career.html" class="hover:text-blue-600 transition">Career</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="py-16">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-4">About</h1>
-      <p class="text-gray-700">Insignyx delivers advanced AI solutions and big data expertise that empower organizations to transform operations and accelerate innovation.</p>
+  <!-- Hero/About Section (side-by-side) -->
+  <section class="relative py-20 bg-gradient-to-r from-blue-700 to-purple-700 text-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start px-6 gap-12">
+      <div class="flex-1">
+        <h1 class="text-4xl font-extrabold mb-4">Who We Are</h1>
+        <p class="text-lg mb-6 opacity-90">Insignyx is a leader in data-driven transformation. We craft tailored AI, analytics, and data engineering solutions for organizations ready to compete and thrive in the digital age.</p>
+        <ul class="space-y-3 text-base">
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 018 8c0 6-8 8-8 8S2 16 2 10a8 8 0 018-8zm0 10a2 2 0 100-4 2 2 0 000 4z"/></svg>
+            <span>Founded in 2018 by data visionaries</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-purple-200" fill="currentColor" viewBox="0 0 20 20"><path d="M8.257 3.099c.366-.446.957-.598 1.463-.36l.094.055 7 4a1 1 0 01.473 1.066l-.027.095-1.516 5.303a1 1 0 01-1.418.634l-.094-.055-7-4a1 1 0 01-.473-1.066l.027-.095L8.257 3.1z"/></svg>
+            <span>50+ experts in AI, data science, and enterprise engineering</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-200" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 01-1 1H8a1 1 0 01-1-1v-2a1 1 0 011-1h2a1 1 0 011 1v2zm-3-8V7a3 3 0 116 0v2a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Projects delivered in 10+ countries</span>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-1 flex justify-center md:justify-end">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80"
+             alt="Team working" class="rounded-xl shadow-2xl w-full max-w-md border-8 border-white border-opacity-30" />
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <!-- Our Story/Timeline Section -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-8 text-center">Our Story</h2>
+    <ol class="relative border-l-4 border-blue-200">
+      <li class="mb-10 ml-6">
+        <div class="absolute w-6 h-6 bg-blue-100 rounded-full -left-3 flex items-center justify-center">
+          <svg class="w-4 h-4 text-blue-700" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10"/></svg>
+        </div>
+        <h3 class="font-bold text-blue-700">2018: Insignyx Founded</h3>
+        <p class="text-gray-700">Began as a small team of data engineers and AI scientists with a vision to make advanced analytics accessible to all businesses.</p>
+      </li>
+      <li class="mb-10 ml-6">
+        <div class="absolute w-6 h-6 bg-purple-100 rounded-full -left-3 flex items-center justify-center">
+          <svg class="w-4 h-4 text-purple-700" fill="currentColor" viewBox="0 0 20 20"><rect width="20" height="20" rx="5"/></svg>
+        </div>
+        <h3 class="font-bold text-purple-700">2020: Rapid Expansion</h3>
+        <p class="text-gray-700">Grew our team and launched enterprise projects in healthcare, finance, and retail.</p>
+      </li>
+      <li class="ml-6">
+        <div class="absolute w-6 h-6 bg-blue-100 rounded-full -left-3 flex items-center justify-center">
+          <svg class="w-4 h-4 text-blue-700" fill="currentColor" viewBox="0 0 20 20"><path d="M5 8l4 4 6-6"/></svg>
+        </div>
+        <h3 class="font-bold text-blue-700">2023+: Leading Innovation</h3>
+        <p class="text-gray-700">Pioneering generative AI, LLMs, and next-gen data platforms for global clients.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Leadership/Team Section (slightly different layout) -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-10 text-center">Leadership Team</h2>
+      <div class="flex flex-wrap gap-8 justify-center">
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-6 w-64 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="https://i.pravatar.cc/160?img=12" alt="CEO" class="w-20 h-20 rounded-full mb-3 border-4 border-blue-400">
+          <div class="font-bold text-blue-700">Alex Johnson</div>
+          <div class="text-sm text-gray-500 mb-2">Chief Executive Officer</div>
+          <div class="text-gray-700 text-sm">Tech leader & business strategist.</div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-6 w-64 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="https://i.pravatar.cc/160?img=47" alt="CTO" class="w-20 h-20 rounded-full mb-3 border-4 border-purple-400">
+          <div class="font-bold text-purple-700">Samantha Lee</div>
+          <div class="text-sm text-gray-500 mb-2">Chief Technology Officer</div>
+          <div class="text-gray-700 text-sm">ML engineer, cloud architect.</div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-6 w-64 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="https://i.pravatar.cc/160?img=60" alt="Head of Data Science" class="w-20 h-20 rounded-full mb-3 border-4 border-blue-300">
+          <div class="font-bold text-blue-700">Michael Smith</div>
+          <div class="text-sm text-gray-500 mb-2">Head of Data Science</div>
+          <div class="text-gray-700 text-sm">Analytics & AI project delivery.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action (different style) -->
+  <section class="max-w-7xl mx-auto text-center py-16">
+    <h2 class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Let’s Build the Future Together</h2>
+    <p class="mb-8 text-lg text-gray-700">
+      Partner with Insignyx for innovative, reliable, and scalable solutions that drive your business forward.
+    </p>
+    <a href="contact.html"
+       class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:from-blue-700 hover:to-purple-700 transition">
+      Contact Us
+    </a>
+  </section>
+
+  <!-- Footer (same for consistency) -->
+  <footer class="bg-gradient-to-r from-blue-900 to-purple-900 text-gray-200 py-8 mt-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+      <div class="flex items-center gap-2 mb-4 md:mb-0">
+        <img src="https://ui-avatars.com/api/?name=Insignyx&background=3b82f6&color=fff&size=64"
+             alt="Brand Logo" class="w-10 h-10 rounded-lg shadow-md">
+        <span class="font-extrabold text-xl tracking-wide">Insignyx</span>
+      </div>
+      <div class="flex space-x-6">
+        <a href="https://www.linkedin.com/" class="hover:text-blue-400" target="_blank" aria-label="LinkedIn">
+          <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.871-3.063-1.872 0-2.159 1.461-2.159 2.971v5.696h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.041 0 3.602 2.002 3.602 4.604v5.592z"/></svg>
+        </a>
+        <a href="https://twitter.com/" class="hover:text-purple-300" target="_blank" aria-label="Twitter">
+          <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.956-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.166-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.062c0 2.385 1.693 4.374 4.188 4.827-.693.188-1.452.232-2.224.084.627 1.956 2.444 3.377 4.604 3.418-2.07 1.623-4.678 2.348-7.29 2.034 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.961-.695 1.797-1.562 2.457-2.549z"/></svg>
+        </a>
+      </div>
+      <div class="text-sm text-gray-400 mt-4 md:mt-0">&copy; 2025 Insignyx. All rights reserved.</div>
+    </div>
+  </footer>
 </body>
 </html>
