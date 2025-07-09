@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Development Company - AI Solutions & Big Data - Insignyx</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/tailwind.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     /* Custom styles for navigation dropdowns and carousels */
@@ -21,9 +21,9 @@
       <nav>
         <ul class="flex space-x-8">
           <li class="relative">
-            <button class="font-semibold hover:text-green-600">Services</button>
+            <a href="#" class="font-semibold hover:text-green-600" id="services-button">Services</a>
             <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4">
+            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4" id="services-dropdown">
               <div>
                 <h3 class="font-bold mb-2">Discover</h3>
                 <ul class="space-y-1 text-sm">
