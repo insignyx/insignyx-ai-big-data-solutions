@@ -73,24 +73,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadPage(page) {
     if (!pages[page]) return;
-    const response = await fetch(pages[page]);
-    const text = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, 'text/html');
-    const mainContent = doc.querySelector('body > section, body > div#content-container');
-    if (mainContent) {
-      contentContainer.innerHTML = '';
-      contentContainer.appendChild(mainContent.cloneNode(true));
+    try {
+      const response = await fetch(pages[page]);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const text = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      const mainContent = doc.querySelector('body > section, body > div#content-container');
+      if (mainContent) {
+        contentContainer.innerHTML = '';
+        contentContainer.appendChild(mainContent.cloneNode(true));
+      }
+    } catch (err) {
+      console.error('Error loading page:', err);
+      throw err;
     }
   }
 
   // Intercept link clicks
   document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
+    link.addEventListener('click', async e => {
       e.preventDefault();
       const href = link.getAttribute('href');
-      loadPage(href);
-      history.pushState(null, '', href);
+      try {
+        await loadPage(href);
+        history.pushState(null, '', href);
+      } catch (err) {
+        window.location.href = href;
+      }
     });
   });
 
