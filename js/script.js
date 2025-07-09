@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (dropdown) {
         const isVisible = dropdown.classList.contains('opacity-100');
         // Hide all dropdowns
-        document.querySelectorAll('nav ul li.relative div').forEach(div => {
+        document.querySelectorAll('nav ul li.relative > div').forEach(div => {
           div.classList.remove('opacity-100');
           div.classList.add('opacity-0');
           div.style.pointerEvents = 'none';
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close dropdowns when clicking outside
   document.addEventListener('click', (e) => {
     if (!e.target.closest('nav ul li.relative')) {
-      document.querySelectorAll('nav ul li.relative div').forEach(div => {
+      document.querySelectorAll('nav ul li.relative > div').forEach(div => {
         div.classList.remove('opacity-100');
         div.classList.add('opacity-0');
         div.style.pointerEvents = 'none';
