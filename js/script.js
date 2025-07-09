@@ -101,4 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('popstate', () => {
     loadPage(location.pathname.substring(1) || 'hero.html');
   });
+
+  // Dynamically load footer for static HTML usage
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (footerPlaceholder) {
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => {
+        footerPlaceholder.innerHTML = html;
+      })
+      .catch(err => console.error('Error loading footer:', err));
+  }
 });
