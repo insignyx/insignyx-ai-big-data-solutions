@@ -74,5 +74,4 @@ The project contains the following files:
 Each HTML file serves a specific purpose and can be modified independently. The footer section is included in multiple pages to maintain a consistent look and feel across the site.
 
 ## Conclusion
-
 Insignyx is positioned at the intersection of AI and Big Data, providing valuable services to organizations looking to leverage technology for operational improvements. This README serves as a guide to understand, install, and explore the Insignyx project. For further information, please refer to the content within the application or contact us via the provided channels in the footer.
