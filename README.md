@@ -33,6 +33,9 @@ You can navigate through the application using the provided header links. The ap
 
 To explore specific content, click on the respective links within the navigation bar.
 
+### Offline Usage
+All HTML pages reference a precompiled version of Tailwind CSS located in `css/tailwind.min.css`. This allows the site to be viewed without internet access. If you prefer to use the CDN version instead, replace the `<link>` element with the CDN `<script>` tag shown below in the Dependencies section.
+
 ## Features
 
 - **Responsive Design**: The application is built to be fully responsive, providing an optimal viewing experience on various devices.
@@ -44,7 +47,12 @@ To explore specific content, click on the respective links within the navigation
 
 This project utilizes the following dependencies, which are referenced in the `HTML` files:
 
-- **Tailwind CSS**: A utility-first CSS framework for creating custom designs easily.
+ - **Tailwind CSS**: A utility-first CSS framework for creating custom designs easily.
+  When working offline, include the precompiled file in `css/tailwind.min.css`:
+  ```html
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  ```
+  Alternatively, you can still reference the CDN for automatic updates:
   ```html
   <script src="https://cdn.tailwindcss.com"></script>
   ```
