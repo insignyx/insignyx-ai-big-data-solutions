@@ -94,8 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Load initial page content
-  loadPage('hero.html');
+  // Load initial page content only on index.html or when no page is specified
+  const currentPage = location.pathname.split('/').pop();
+  if (!currentPage || currentPage === '' || currentPage === 'index.html') {
+    loadPage('hero.html');
+  }
 
   // Handle browser back/forward buttons
   window.addEventListener('popstate', () => {
