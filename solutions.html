@@ -2,79 +2,358 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solutions - Insignyx</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/tailwind.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solutions | AI & Big Data Solutions by Industry - Insignyx</title>
+  <meta name="description" content="Comprehensive AI and Big Data solutions tailored for specific industries including healthcare, finance, retail, manufacturing, and more.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .solution-card { transition: all 0.3s ease; }
+    .solution-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  </style>
 </head>
-<body class="bg-white font-sans text-gray-900 theme-modern">
+<body class="bg-gray-50 text-gray-900">
 
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="hero.html" class="text-2xl font-bold text-black">insignyx</a>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-extrabold text-2xl text-blue-700 tracking-wide">
+        <img src="https://ui-avatars.com/api/?name=Insignyx&background=3b82f6&color=fff&size=64"
+             alt="Brand Logo" class="w-10 h-10 rounded-lg shadow-md inline mr-2 align-middle">
+        Insignyx
+      </a>
       <nav>
-        <ul class="flex space-x-8">
-          <li class="relative">
-            <button class="font-semibold hover:text-green-600">Services</button>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="font-bold mb-2">Discover</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Big Data Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Organize data</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Business Intelligence Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Data Engineering Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Databricks Deployment Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Develop</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Proof of Concept (PoC)</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Development Company</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">LLMs Development</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Machine Learning Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Deploy</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Integration Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">MLOps Consulting</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="solutions.html" class="font-semibold hover:text-green-600">Solutions</a></li>
-          <li><a href="products.html" class="font-semibold hover:text-green-600">Products</a></li>
-          <li><a href="about.html" class="font-semibold hover:text-green-600">About</a></li>
-          <li><a href="resources.html" class="font-semibold hover:text-green-600">Resources</a></li>
-          <li><a href="case-studies.html" class="font-semibold hover:text-green-600">Case studies</a></li>
-          <li><a href="career.html" class="font-semibold hover:text-green-600">Career</a></li>
-          <li><a href="contact.html" class="font-semibold hover:text-green-600">Contact</a></li>
+        <ul class="flex gap-6 items-center font-semibold text-gray-700">
+          <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+          <li><a href="solutions.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Solutions</a></li>
+          <li><a href="products.html" class="hover:text-blue-600 transition">Products</a></li>
+          <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+          <li><a href="resources.html" class="hover:text-blue-600 transition">Resources</a></li>
+          <li><a href="case-studies.html" class="hover:text-blue-600 transition">Case Studies</a></li>
+          <li><a href="career.html" class="hover:text-blue-600 transition">Career</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Solutions</h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+        Industry-specific AI and Big Data solutions designed to solve your unique business challenges and drive measurable results.
+      </p>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
   <section class="py-16">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-4">Solutions</h1>
-      <p class="text-gray-700">From strategy and data pipelines to MLOps, our solutions cover the entire AI lifecycle across multiple industries.</p>
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Technologies</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">AI Document Processing</h3>
+          <p class="text-gray-600 mb-4">Automate document workflows with intelligent extraction, classification, and processing of unstructured data from documents, forms, and contracts.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• OCR & Data Extraction</li>
+            <li>• Document Classification</li>
+            <li>• Automated Workflows</li>
+          </ul>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">AI-powered Knowledge Base</h3>
+          <p class="text-gray-600 mb-4">Transform your knowledge management with intelligent search, automated summarization, and conversational AI that understands your business context.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Semantic Search</li>
+            <li>• Automated Summarization</li>
+            <li>• Conversational AI</li>
+          </ul>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Enterprise Generative AI Platform</h3>
+          <p class="text-gray-600 mb-4">Deploy secure, scalable generative AI solutions tailored for enterprise environments with governance, compliance, and integration capabilities.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Enterprise Security</li>
+            <li>• Scalable Architecture</li>
+            <li>• Governance & Compliance</li>
+          </ul>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">LLM-Based Solutions</h3>
+          <p class="text-gray-600 mb-4">Leverage large language models for content generation, code assistance, customer support, and business process automation.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Content Generation</li>
+            <li>• Code Assistance</li>
+            <li>• Customer Support</li>
+          </ul>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Computer Vision Solutions</h3>
+          <p class="text-gray-600 mb-4">Extract insights from visual data with advanced image recognition, object detection, and video analysis capabilities.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Image Recognition</li>
+            <li>• Object Detection</li>
+            <li>• Video Analysis</li>
+          </ul>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-8">
+          <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Predictive Analytics</h3>
+          <p class="text-gray-600 mb-4">Forecast future trends and behaviors with machine learning models that analyze historical data to predict outcomes.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• Demand Forecasting</li>
+            <li>• Risk Assessment</li>
+            <li>• Customer Behavior</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Industries</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Healthcare</h3>
+          <p class="text-sm text-gray-600">AI solutions for diagnostics, drug discovery, and patient care optimization.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Finance</h3>
+          <p class="text-sm text-gray-600">Risk management, fraud detection, and algorithmic trading solutions.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Retail</h3>
+          <p class="text-sm text-gray-600">Personalization, inventory optimization, and customer analytics.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Manufacturing</h3>
+          <p class="text-sm text-gray-600">Predictive maintenance, quality control, and supply chain optimization.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Legal</h3>
+          <p class="text-sm text-gray-600">Contract analysis, legal research, and compliance monitoring.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Technology</h3>
+          <p class="text-sm text-gray-600">Software development, DevOps optimization, and tech stack modernization.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8l-2-2m0 0l2-2m-2 2h12"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Logistics</h3>
+          <p class="text-sm text-gray-600">Route optimization, demand forecasting, and fleet management.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Aviation</h3>
+          <p class="text-sm text-gray-600">Flight optimization, maintenance scheduling, and passenger experience.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Insurance</h3>
+          <p class="text-sm text-gray-600">Claims processing, risk assessment, and fraud detection.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Common Use Cases</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Customer Service Automation</h3>
+          <p class="text-gray-600 text-sm">AI-powered chatbots and virtual assistants that handle customer inquiries 24/7 with human-like responses.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Fraud Detection</h3>
+          <p class="text-gray-600 text-sm">Real-time fraud detection systems that analyze patterns and anomalies to prevent financial losses.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Demand Forecasting</h3>
+          <p class="text-gray-600 text-sm">Accurate predictions of customer demand to optimize inventory and reduce waste.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Quality Control</h3>
+          <p class="text-gray-600 text-sm">Automated quality inspection systems that detect defects and ensure product consistency.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Personalized Recommendations</h3>
+          <p class="text-gray-600 text-sm">AI-driven recommendation engines that increase engagement and sales through personalization.</p>
+        </div>
+
+        <div class="solution-card bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Process Automation</h3>
+          <p class="text-gray-600 text-sm">End-to-end automation of repetitive business processes to improve efficiency and reduce costs.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Industry?</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Let's discuss how our industry-specific solutions can address your unique challenges.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+          Get Started
+        </a>
+        <a href="case-studies.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+          View Case Studies
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4">Technologies</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#document-processing" class="hover:text-blue-400">AI Document Processing</a></li>
+            <li><a href="#knowledge-base" class="hover:text-blue-400">Knowledge Base</a></li>
+            <li><a href="#generative-ai" class="hover:text-blue-400">Generative AI</a></li>
+            <li><a href="#computer-vision" class="hover:text-blue-400">Computer Vision</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Industries</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#healthcare" class="hover:text-blue-400">Healthcare</a></li>
+            <li><a href="#finance" class="hover:text-blue-400">Finance</a></li>
+            <li><a href="#retail" class="hover:text-blue-400">Retail</a></li>
+            <li><a href="#manufacturing" class="hover:text-blue-400">Manufacturing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="services.html" class="hover:text-blue-400">All Services</a></li>
+            <li><a href="services.html#discover" class="hover:text-blue-400">AI Consulting</a></li>
+            <li><a href="services.html#develop" class="hover:text-blue-400">Development</a></li>
+            <li><a href="services.html#deploy" class="hover:text-blue-400">Deployment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact</h3>
+          <address class="text-sm not-italic space-y-2">
+            <p>Insignyx Warsaw - HQ</p>
+            <p>Świeradowska 47 02-662</p>
+            <p>Warsaw Poland</p>
+            <p>Email: <a href="mailto:hi@insignyx.com" class="hover:text-blue-400">hi@insignyx.com</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2025 Insignyx sp. z o.o. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
