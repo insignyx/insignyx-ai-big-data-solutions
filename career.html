@@ -3,78 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Career - Insignyx</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/tailwind.min.css" />
+  <title>Career - Join Our AI Team | Insignyx</title>
+  <meta name="description" content="Join our team of innovators and help build cutting-edge AI applications that solve real business challenges. Explore open positions and company culture.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
+  <style>
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .job-card { transition: all 0.3s ease; }
+    .job-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  </style>
 </head>
-<body class="bg-white font-sans text-gray-900">
+<body class="bg-gray-50 font-sans text-gray-900">
 
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="hero.html" class="text-2xl font-bold text-black">insignyx</a>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-extrabold text-2xl text-blue-700 tracking-wide">
+        <img src="https://ui-avatars.com/api/?name=Insignyx&background=3b82f6&color=fff&size=64"
+             alt="Insignyx Logo" class="w-10 h-10 rounded-lg shadow-md inline mr-2 align-middle">
+        Insignyx
+      </a>
       <nav>
-        <ul class="flex space-x-8">
-          <li class="relative">
-            <button class="font-semibold hover:text-green-600">Services</button>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="font-bold mb-2">Discover</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Big Data Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Organize data</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Business Intelligence Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Data Engineering Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Databricks Deployment Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Develop</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Proof of Concept (PoC)</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Development Company</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">LLMs Development</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Machine Learning Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Deploy</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Integration Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">MLOps Consulting</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a href="solutions.html" class="font-semibold hover:text-green-600">Solutions</a></li>
-          <li><a href="products.html" class="font-semibold hover:text-green-600">Products</a></li>
-          <li><a href="about.html" class="font-semibold hover:text-green-600">About</a></li>
-          <li><a href="resources.html" class="font-semibold hover:text-green-600">Resources</a></li>
-          <li><a href="case-studies.html" class="font-semibold hover:text-green-600">Case studies</a></li>
-          <li><a href="career.html" class="font-semibold hover:text-green-600">Career</a></li>
-          <li><a href="contact.html" class="font-semibold hover:text-green-600">Contact</a></li>
+        <ul class="flex gap-6 items-center font-semibold text-gray-700">
+          <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+          <li><a href="solutions.html" class="hover:text-blue-600 transition">Solutions</a></li>
+          <li><a href="products.html" class="hover:text-blue-600 transition">Products</a></li>
+          <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+          <li><a href="resources.html" class="hover:text-blue-600 transition">Resources</a></li>
+          <li><a href="case-studies.html" class="hover:text-blue-600 transition">Case Studies</a></li>
+          <li><a href="career.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Career</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+        Join our team of innovators and help build cutting-edge AI applications that solve real business challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why Join Us -->
   <section class="py-16">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-4">Career</h1>
-      <p class="text-gray-700">Join our team of innovators and help build cutting-edge AI applications that solve real business challenges.</p>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Why Join Insignyx?</h2>
+        <p class="text-xl text-gray-600">Be part of the AI revolution and shape the future of technology</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Cutting-Edge Projects</h3>
+          <p class="text-gray-600">Work on challenging AI projects that push the boundaries of what's possible</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Competitive Compensation</h3>
+          <p class="text-gray-600">Market-leading salaries, equity options, and comprehensive benefits package</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Growth & Learning</h3>
+          <p class="text-gray-600">Continuous learning opportunities, conferences, and professional development</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Positions -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Open Positions</h2>
+      <div class="space-y-6">
+        
+        <!-- Job 1 -->
+        <div class="bg-white border rounded-lg p-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Senior Machine Learning Engineer</h3>
+              <p class="text-gray-600 mb-2">Warsaw, Poland • Full-time • Remote/Hybrid</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Python</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">TensorFlow</span>
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">AWS</span>
+                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Docker</span>
+              </div>
+              <p class="text-gray-600">Lead the development of scalable ML solutions for enterprise clients. 5+ years experience required.</p>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition whitespace-nowrap">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="bg-white border rounded-lg p-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Data Scientist</h3>
+              <p class="text-gray-600 mb-2">Warsaw, Poland • Full-time • Remote/Hybrid</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Python</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">R</span>
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">SQL</span>
+                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Statistics</span>
+              </div>
+              <p class="text-gray-600">Analyze complex datasets and build predictive models. Strong statistical background required.</p>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition whitespace-nowrap">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="bg-white border rounded-lg p-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Full Stack Developer</h3>
+              <p class="text-gray-600 mb-2">Warsaw, Poland • Full-time • Remote/Hybrid</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Node.js</span>
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">PostgreSQL</span>
+                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">AWS</span>
+              </div>
+              <p class="text-gray-600">Build scalable web applications and APIs for AI products. Experience with cloud platforms preferred.</p>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition whitespace-nowrap">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="bg-white border rounded-lg p-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold mb-2">DevOps Engineer</h3>
+              <p class="text-gray-600 mb-2">Warsaw, Poland • Full-time • Remote/Hybrid</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Kubernetes</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Docker</span>
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">CI/CD</span>
+                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">AWS</span>
+              </div>
+              <p class="text-gray-600">Manage cloud infrastructure and deployment pipelines for AI applications. Experience with MLOps a plus.</p>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition whitespace-nowrap">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Job 5 -->
+        <div class="bg-white border rounded-lg p-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Product Manager</h3>
+              <p class="text-gray-600 mb-2">Warsaw, Poland • Full-time • Remote/Hybrid</p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Product Strategy</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Agile</span>
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">AI/ML</span>
+                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Analytics</span>
+              </div>
+              <p class="text-gray-600">Define product vision and roadmap for AI products. Technical background and market experience required.</p>
+            </div>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition whitespace-nowrap">
+              Apply Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">What We Offer</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Competitive Salary</h3>
+          <p class="text-gray-600">Market-leading compensation with equity options</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8l-2-2m0 0l2-2m-2 2h12"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Flexible Work</h3>
+          <p class="text-gray-600">Remote work options and flexible hours</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Learning Budget</h3>
+          <p class="text-gray-600">Annual budget for courses, conferences, and books</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Health & Wellness</h3>
+          <p class="text-gray-600">Private healthcare, gym membership, and wellness programs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <h2 class="text-3xl font-bold text-center mb-6">Submit Your Application</h2>
+        <p class="text-gray-600 text-center mb-8">Can't find the perfect role? Send us your resume anyway!</p>
+        
+        <!-- Google Form Integration -->
+        <div class="space-y-6">
+          <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-blue-700">
+                  <strong>Quick Application Process:</strong> Click the button below to complete your application via our secure Google Form. You'll be able to upload your resume and provide all required information.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a href="https://forms.gle/placeholder-insignyx-career-form" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-150 ease-in-out">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.5 13a3.5 3.5 0 01-.369-6H2a1 1 0 000 2h3.191c.312.778.777 1.45 1.374 1.997L5.5 13zM5.5 13a3.5 3.5 0 003.5-3.5c0-.178-.01-.355-.031-.53A4.001 4.001 0 0012.5 6a4 4 0 00-3.856 2.229A4.001 4.001 0 004.5 13a4 4 0 100 8h7a1 1 0 100-2h-7a2 2 0 110-4z"/>
+              </svg>
+              Apply Now via Google Form
+            </a>
+          </div>
+
+          <div class="text-sm text-gray-600 text-center">
+            <p>You'll be redirected to a secure Google Form where you can:</p>
+            <ul class="list-disc list-inside mt-2 space-y-1">
+              <li>Upload your resume/CV (PDF, DOC, DOCX)</li>
+              <li>Provide your contact information</li>
+              <li>Select your desired position</li>
+              <li>Include a cover letter</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Alternative Application Methods -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h3 class="text-lg font-medium text-gray-900 mb-4">Other Ways to Apply</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-medium text-gray-900 mb-2">Email Application</h4>
+              <p class="text-sm text-gray-600 mb-2">Send your resume directly to our HR team</p>
+              <a href="mailto:careers@insignyx.com?subject=Job Application" 
+                 class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                careers@insignyx.com
+              </a>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-medium text-gray-900 mb-2">LinkedIn</h4>
+              <p class="text-sm text-gray-600 mb-2">Connect with us on LinkedIn</p>
+              <a href="https://linkedin.com/company/insignyx" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                View Our LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-white font-bold mb-4">Careers</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400">Open Positions</a></li>
+            <li><a href="#" class="hover:text-blue-400">Benefits</a></li>
+            <li><a href="#" class="hover:text-blue-400">Culture</a></li>
+            <li><a href="#" class="hover:text-blue-400">Internships</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Teams</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400">Engineering</a></li>
+            <li><a href="#" class="hover:text-blue-400">Data Science</a></li>
+            <li><a href="#" class="hover:text-blue-400">Product</a></li>
+            <li><a href="#" class="hover:text-blue-400">Sales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Locations</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400">Warsaw, Poland</a></li>
+            <li><a href="#" class="hover:text-blue-400">Remote</a></li>
+            <li><a href="#" class="hover:text-blue-400">Hybrid</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact</h3>
+          <address class="text-sm not-italic space-y-2">
+            <p>Insignyx Warsaw - HQ</p>
+            <p>Świeradowska 47 02-662</p>
+            <p>Warsaw Poland</p>
+            <p>Email: <a href="mailto:careers@insignyx.com" class="hover:text-blue-400">careers@insignyx.com</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2025 Insignyx sp. z o.o. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
