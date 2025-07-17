@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -17,87 +18,23 @@
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="hero.html" class="text-2xl font-bold text-black">insignyx</a>
+      <a href="index.html" class="text-2xl font-bold text-black flex items-center">
+        <img src="images/insignyx-logo.png" 
+             alt="Insignyx Logo" 
+             class="h-8 w-auto mr-2"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="hidden" style="display:none;">insignyx</span>
+      </a>
       <nav>
         <ul class="flex space-x-8">
           <li class="relative">
-            <a href="#" class="font-semibold hover:text-green-600" id="services-button">Services</a>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 transition-opacity pointer-events-none z-10 p-4 grid grid-cols-2 gap-4" id="services-dropdown">
-              <div>
-                <h3 class="font-bold mb-2">Discover</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Big Data Consulting</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Organize data</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Business Intelligence Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Data Engineering Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Databricks Deployment Services</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Develop</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Proof of Concept (PoC)</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Generative AI Development Company</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">LLMs Development</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">Machine Learning Consulting</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="font-bold mb-2">Deploy</h3>
-                <ul class="space-y-1 text-sm">
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">AI Integration Services</a></li>
-                  <li><a href="core-capabilities.html" class="hover:text-green-600">MLOps Consulting</a></li>
-                </ul>
-              </div>
-            </div>
+            <a href="services.html" class="font-semibold hover:text-green-600">Services</a>
           </li>
-          <li class="relative group">
-            <button class="font-semibold hover:text-green-600">Solutions</button>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-10 p-4">
-              <h3 class="font-bold mb-2">Technologies</h3>
-              <ul class="space-y-1 text-sm">
-                <li><a href="#" class="hover:text-green-600">AI Document Processing</a></li>
-                <li><a href="#" class="hover:text-green-600">AI-powered Knowledge Base</a></li>
-                <li><a href="#" class="hover:text-green-600">Enterprise Generative AI Platform</a></li>
-                <li><a href="#" class="hover:text-green-600">LLM-Based Solutions</a></li>
-                <li><a href="#" class="hover:text-green-600">Computer Vision Solutions</a></li>
-              </ul>
-              <h3 class="font-bold mt-4 mb-2">Industries</h3>
-              <ul class="space-y-1 text-sm columns-2">
-                <li><a href="#" class="hover:text-green-600">Aviation</a></li>
-                <li><a href="#" class="hover:text-green-600">Manufacturing</a></li>
-                <li><a href="#" class="hover:text-green-600">Private Investments</a></li>
-                <li><a href="#" class="hover:text-green-600">Technology companies</a></li>
-                <li><a href="#" class="hover:text-green-600">Finance & Insurance</a></li>
-                <li><a href="#" class="hover:text-green-600">Retail</a></li>
-                <li><a href="#" class="hover:text-green-600">Legal</a></li>
-                <li><a href="#" class="hover:text-green-600">Healthcare</a></li>
-                <li><a href="#" class="hover:text-green-600">Logistics</a></li>
-                <li><a href="#" class="hover:text-green-600">Automotive</a></li>
-              </ul>
-            </div>
+          <li class="relative">
+            <a href="solutions.html" class="font-semibold hover:text-green-600">Solutions</a>
           </li>
-          <li class="relative group">
-            <button class="font-semibold hover:text-green-600">Products</button>
-            <!-- Dropdown -->
-            <div class="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-10 p-4">
-              <h3 class="font-bold mb-2">ContextClue</h3>
-              <ul class="space-y-1 text-sm">
-                <li><a href="#" class="hover:text-green-600">AI-Powered Knowledge Base Assistant</a></li>
-              </ul>
-              <h3 class="font-bold mt-4 mb-2">OpenSource</h3>
-              <ul class="space-y-1 text-sm">
-                <li><a href="#" class="hover:text-green-600">Evaluate Your RAG-Powered Chatbots</a></li>
-              </ul>
-            </div>
+          <li class="relative">
+            <a href="products.html" class="font-semibold hover:text-green-600">Products</a>
           </li>
           <li><a href="about.html" class="font-semibold hover:text-green-600">About</a></li>
           <li><a href="resources.html" class="font-semibold hover:text-green-600">Resources</a></li>
@@ -236,10 +173,11 @@
         <div class="w-full md:w-1/4 mb-8 md:mb-0">
           <h3 class="font-bold mb-4">Services</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-green-600">Discover</a></li>
-            <li><a href="#" class="hover:text-green-600">Organize data</a></li>
-            <li><a href="#" class="hover:text-green-600">Develop</a></li>
-            <li><a href="#" class="hover:text-green-600">Deploy</a></li>
+            <li><a href="services.html" class="hover:text-green-600">All Services</a></li>
+            <li><a href="services.html#discover" class="hover:text-green-600">Discover</a></li>
+            <li><a href="services.html#organize" class="hover:text-green-600">Organize data</a></li>
+            <li><a href="services.html#develop" class="hover:text-green-600">Develop</a></li>
+            <li><a href="services.html#deploy" class="hover:text-green-600">Deploy</a></li>
           </ul>
         </div>
         <div class="w-full md:w-1/4 mb-8 md:mb-0">

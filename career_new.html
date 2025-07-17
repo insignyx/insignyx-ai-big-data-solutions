@@ -20,14 +20,9 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="font-extrabold text-2xl text-blue-700 tracking-wide flex items-center">
-        <img src="images/insignyx-logo.png" 
-             alt="Insignyx Logo" 
-             class="h-10 w-auto mr-2"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-md flex items-center justify-center mr-2" style="display:none;">
-          <span class="text-white font-bold text-lg">I</span>
-        </div>
+      <a href="index.html" class="font-extrabold text-2xl text-blue-700 tracking-wide">
+        <img src="https://ui-avatars.com/api/?name=Insignyx&background=3b82f6&color=fff&size=64"
+             alt="Insignyx Logo" class="w-10 h-10 rounded-lg shadow-md inline mr-2 align-middle">
         Insignyx
       </a>
       <nav>
@@ -105,7 +100,7 @@
       <div class="space-y-6">
         
         <!-- Job 1 -->
-        <div class="bg-white border rounded-lg p-6">
+        <div class="job-card bg-white border rounded-lg p-6">
           <div class="flex justify-between items-start">
             <div>
               <h3 class="text-xl font-bold mb-2">Senior Machine Learning Engineer</h3>
@@ -125,7 +120,7 @@
         </div>
 
         <!-- Job 2 -->
-        <div class="bg-white border rounded-lg p-6">
+        <div class="job-card bg-white border rounded-lg p-6">
           <div class="flex justify-between items-start">
             <div>
               <h3 class="text-xl font-bold mb-2">Data Scientist</h3>
@@ -145,7 +140,7 @@
         </div>
 
         <!-- Job 3 -->
-        <div class="bg-white border rounded-lg p-6">
+        <div class="job-card bg-white border rounded-lg p-6">
           <div class="flex justify-between items-start">
             <div>
               <h3 class="text-xl font-bold mb-2">Full Stack Developer</h3>
@@ -165,7 +160,7 @@
         </div>
 
         <!-- Job 4 -->
-        <div class="bg-white border rounded-lg p-6">
+        <div class="job-card bg-white border rounded-lg p-6">
           <div class="flex justify-between items-start">
             <div>
               <h3 class="text-xl font-bold mb-2">DevOps Engineer</h3>
@@ -185,7 +180,7 @@
         </div>
 
         <!-- Job 5 -->
-        <div class="bg-white border rounded-lg p-6">
+        <div class="job-card bg-white border rounded-lg p-6">
           <div class="flex justify-between items-start">
             <div>
               <h3 class="text-xl font-bold mb-2">Product Manager</h3>
@@ -262,71 +257,46 @@
       <div class="bg-white rounded-xl shadow-lg p-8">
         <h2 class="text-3xl font-bold text-center mb-6">Submit Your Application</h2>
         <p class="text-gray-600 text-center mb-8">Can't find the perfect role? Send us your resume anyway!</p>
-        
-        <!-- Google Form Integration -->
-        <div class="space-y-6">
-          <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="ml-3">
-                <p class="text-sm text-blue-700">
-                  <strong>Quick Application Process:</strong> Click the button below to complete your application via our secure Google Form. You'll be able to upload your resume and provide all required information.
-                </p>
-              </div>
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+              <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+              <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             </div>
           </div>
-
-          <div class="text-center">
-            <a href="https://forms.gle/placeholder-insignyx-career-form" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-150 ease-in-out">
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M5.5 13a3.5 3.5 0 01-.369-6H2a1 1 0 000 2h3.191c.312.778.777 1.45 1.374 1.997L5.5 13zM5.5 13a3.5 3.5 0 003.5-3.5c0-.178-.01-.355-.031-.53A4.001 4.001 0 0012.5 6a4 4 0 00-3.856 2.229A4.001 4.001 0 004.5 13a4 4 0 100 8h7a1 1 0 100-2h-7a2 2 0 110-4z"/>
-              </svg>
-              Apply Now via Google Form
-            </a>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
           </div>
-
-          <div class="text-sm text-gray-600 text-center">
-            <p>You'll be redirected to a secure Google Form where you can:</p>
-            <ul class="list-disc list-inside mt-2 space-y-1">
-              <li>Upload your resume/CV (PDF, DOC, DOCX)</li>
-              <li>Provide your contact information</li>
-              <li>Select your desired position</li>
-              <li>Include a cover letter</li>
-            </ul>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Position</label>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option>Select position</option>
+              <option>Senior Machine Learning Engineer</option>
+              <option>Data Scientist</option>
+              <option>Full Stack Developer</option>
+              <option>DevOps Engineer</option>
+              <option>Product Manager</option>
+              <option>General Application</option>
+            </select>
           </div>
-        </div>
-
-        <!-- Alternative Application Methods -->
-        <div class="mt-12 pt-8 border-t border-gray-200">
-          <h3 class="text-lg font-medium text-gray-900 mb-4">Other Ways to Apply</h3>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <h4 class="font-medium text-gray-900 mb-2">Email Application</h4>
-              <p class="text-sm text-gray-600 mb-2">Send your resume directly to our HR team</p>
-              <a href="mailto:careers@insignyx.com?subject=Job Application" 
-                 class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                careers@insignyx.com
-              </a>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <h4 class="font-medium text-gray-900 mb-2">LinkedIn</h4>
-              <p class="text-sm text-gray-600 mb-2">Connect with us on LinkedIn</p>
-              <a href="https://linkedin.com/company/insignyx" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                View Our LinkedIn
-              </a>
-            </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Resume/CV</label>
+            <input type="file" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
           </div>
-        </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Cover Letter</label>
+            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                      placeholder="Tell us why you'd be a great fit for our team"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Submit Application
+          </button>
+        </form>
       </div>
     </div>
   </section>
