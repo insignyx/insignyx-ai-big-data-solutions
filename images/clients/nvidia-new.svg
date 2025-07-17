@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30">
+  <path fill="#76B900" d="M0 0h100v30H0z"/>
+  <path fill="#FFFFFF" d="M15 8h70v14H15z"/>
+  <text x="50" y="19" font-family="Arial" font-size="12" fill="#76B900" text-anchor="middle">NVIDIA</text>
+</svg>
