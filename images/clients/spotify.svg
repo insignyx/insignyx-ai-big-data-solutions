@@ -1,1 +1,23 @@
-File not found: /v1/AUTH_mw/wikipedia-commons-local-public.7e/7/7e/Spotify_logo_green.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496" width="496" height="496">
+  <defs>
+    <style>
+      .spotify-green { fill: #1db954; }
+    </style>
+  </defs>
+  <g>
+    <!-- Spotify circle background -->
+    <circle class="spotify-green" cx="248" cy="248" r="248"/>
+    
+    <!-- Spotify sound waves -->
+    <g fill="#000">
+      <!-- Top wave -->
+      <path d="M361.5 288.5c-105.5-62.5-279.5-68.5-380.5-37.5-10.5 3.5-21.5-2.5-25-13s2.5-21.5 13-25c116-35.5 306.5-28.5 427.5 43.5 9.5 5.5 12.5 18 7 27.5s-18 12.5-27.5 7c-5-3-10-6-14.5-2z"/>
+      
+      <!-- Middle wave -->
+      <path d="M416.5 374.5c-8.5 14-26.5 18.5-40.5 10-99.5-60.5-251.5-78-330.5-43-15.5 7-34-1.5-41-17s1.5-34 17-41c97-43 268.5-21.5 383 49.5 14 8.5 18.5 26.5 10 40.5h2z"/>
+      
+      <!-- Bottom wave -->
+      <path d="M446.5 450.5c-6.5 10.5-20.5 14-31 7.5-82.5-50.5-186.5-62-308.5-34-12 2.5-24-5-26.5-17s5-24 17-26.5c133.5-30.5 248.5-17.5 341.5 39 10.5 6.5 14 20.5 7.5 31z"/>
+    </g>
+  </g>
+</svg>

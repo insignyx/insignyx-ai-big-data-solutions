@@ -1,1 +1,38 @@
-File not found: /v1/AUTH_mw/wikipedia-commons-local-public.0e/0/0e/Nvidia_logo.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400">
+  <defs>
+    <style>
+      .nvidia-green { fill: #76b900; }
+      .nvidia-text { fill: #000; }
+    </style>
+  </defs>
+  <g>
+    <!-- Nvidia eye logo -->
+    <path class="nvidia-green" d="M50 200c0-80 65-145 145-145s145 65 145 145-65 145-145 145S50 280 50 200zm145-100c-55 0-100 45-100 100s45 100 100 100 100-45 100-100-45-100-100-100z"/>
+    <ellipse class="nvidia-green" cx="195" cy="200" rx="60" ry="80"/>
+    <ellipse class="nvidia-green" cx="195" cy="200" rx="30" ry="40" fill="#fff"/>
+    
+    <!-- Nvidia text -->
+    <g class="nvidia-text">
+      <!-- N -->
+      <path d="M400 120h40l80 120V120h35v160h-40l-80-120v120h-35V120z"/>
+      
+      <!-- V -->
+      <path d="M580 120h40l30 120 30-120h40l-45 160h-50l-45-160z"/>
+      
+      <!-- I -->
+      <path d="M740 120h35v160h-35V120z"/>
+      
+      <!-- D -->
+      <path d="M800 120h50c50 0 85 35 85 80s-35 80-85 80h-50V120zm35 30v100h15c30 0 50-20 50-50s-20-50-50-50h-15z"/>
+      
+      <!-- I -->
+      <path d="M960 120h35v160h-35V120z"/>
+      
+      <!-- A -->
+      <path d="M1020 120h40l50 160h-40l-8-30h-44l-8 30h-40l50-160zm20 40l-15 60h30l-15-60z"/>
+    </g>
+    
+    <!-- Trademark -->
+    <text x="1150" y="140" class="nvidia-text" font-family="Arial, sans-serif" font-size="20" font-weight="bold">™</text>
+  </g>
+</svg>
