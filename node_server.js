@@ -30,10 +30,15 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
   
-  // SEO: Handle www to non-www redirect
+  // SEO: Handle www to non-www redirect with proper protocol detection
   const host = req.headers.host;
   if (host && host.startsWith('www.')) {
-    const redirectUrl = `http://${host.slice(4)}${req.url}`;
+    // Determine if the request is HTTPS based on headers
+    const isHttps = req.headers['x-forwarded-proto'] === 'https' || 
+                   req.headers['x-forwarded-ssl'] === 'on' ||
+                   req.connection.encrypted;
+    const protocol = isHttps ? 'https' : 'http';
+    const redirectUrl = `${protocol}://${host.slice(4)}${req.url}`;
     res.writeHead(301, { 'Location': redirectUrl, ...securityHeaders });
     res.end();
     return;

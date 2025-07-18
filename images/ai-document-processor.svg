@@ -1,0 +1,49 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Document Stack -->
+  <rect x="50" y="80" width="120" height="140" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="60" y="90" width="120" height="140" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="70" y="100" width="120" height="140" rx="8" fill="white" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- Document Content Lines -->
+  <line x1="85" y1="120" x2="175" y2="120" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="85" y1="135" x2="165" y2="135" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="85" y1="150" x2="170" y2="150" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="85" y1="165" x2="155" y2="165" stroke="#9ca3af" stroke-width="2"/>
+  
+  <!-- Arrow -->
+  <path d="M210 170 L250 170" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  
+  <!-- AI Processing Icon -->
+  <circle cx="280" cy="170" r="30" fill="#3b82f6"/>
+  <text x="280" y="178" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+  
+  <!-- Extracted Data -->
+  <rect x="230" y="50" width="140" height="80" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="240" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#065f46">Extracted Data:</text>
+  <text x="240" y="90" font-family="Arial, sans-serif" font-size="10" fill="#047857">• Invoice #: INV-2024-001</text>
+  <text x="240" y="105" font-family="Arial, sans-serif" font-size="10" fill="#047857">• Amount: $1,250.00</text>
+  <text x="240" y="120" font-family="Arial, sans-serif" font-size="10" fill="#047857">• Date: 2024-01-15</text>
+  
+  <!-- Workflow Arrow -->
+  <path d="M300 200 L300 240" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  
+  <!-- Automated Workflow -->
+  <rect x="220" y="250" width="160" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="275" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Automated Workflow</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151" text-anchor="middle">AI Document Processing</text>
+</svg>

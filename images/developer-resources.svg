@@ -1,0 +1,45 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Document Icon -->
+  <rect x="50" y="50" width="120" height="150" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="50" y="50" width="120" height="30" rx="8" fill="#3b82f6"/>
+  <text x="110" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Documentation</text>
+  
+  <!-- Content Lines -->
+  <line x1="65" y1="100" x2="155" y2="100" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="65" y1="115" x2="145" y2="115" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="65" y1="130" x2="150" y2="130" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="65" y1="145" x2="140" y2="145" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="65" y1="160" x2="155" y2="160" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="65" y1="175" x2="135" y2="175" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- API Reference -->
+  <rect x="200" y="50" width="150" height="100" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="275" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#065f46" text-anchor="middle">API Reference</text>
+  
+  <!-- Code Blocks -->
+  <rect x="215" y="85" width="120" height="15" rx="3" fill="#f3f4f6"/>
+  <text x="275" y="96" font-family="monospace" font-size="8" fill="#374151" text-anchor="middle">GET /api/v1/users</text>
+  
+  <rect x="215" y="105" width="120" height="15" rx="3" fill="#f3f4f6"/>
+  <text x="275" y="116" font-family="monospace" font-size="8" fill="#374151" text-anchor="middle">POST /api/v1/data</text>
+  
+  <rect x="215" y="125" width="120" height="15" rx="3" fill="#f3f4f6"/>
+  <text x="275" y="136" font-family="monospace" font-size="8" fill="#374151" text-anchor="middle">PUT /api/v1/update</text>
+  
+  <!-- Tutorial Section -->
+  <rect x="50" y="220" width="300" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e" text-anchor="middle">Interactive Tutorials</text>
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="12" fill="#d97706" text-anchor="middle">Step-by-step guides with examples</text>
+  
+  <!-- Support Chat -->
+  <rect x="200" y="170" width="150" height="40" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="275" y="190" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6" text-anchor="middle">24/7 Support Chat</text>
+  <circle cx="330" cy="190" r="8" fill="#10b981"/>
+  <text x="330" y="195" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">●</text>
+  
+  <!-- Title -->
+  <text x="200" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151" text-anchor="middle">Developer Resources</text>
+</svg>

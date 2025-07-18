@@ -1,0 +1,50 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#1e40af"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">ContextClue Dashboard</text>
+  
+  <!-- Search Bar -->
+  <rect x="40" y="120" width="720" height="60" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="60" y="155" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">Search your knowledge base...</text>
+  <circle cx="720" cy="150" r="20" fill="#3b82f6"/>
+  <path d="M715 145 l10 10 M725 145 l-10 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Main Content Area -->
+  <rect x="40" y="200" width="480" height="360" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Document Cards -->
+  <rect x="60" y="220" width="440" height="80" rx="6" fill="#f3f4f6"/>
+  <rect x="80" y="240" width="40" height="40" rx="4" fill="#ddd6fe"/>
+  <text x="140" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#374151">Product Requirements Document</text>
+  <text x="140" y="275" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Updated 2 hours ago • 95% match</text>
+  
+  <rect x="60" y="320" width="440" height="80" rx="6" fill="#f3f4f6"/>
+  <rect x="80" y="340" width="40" height="40" rx="4" fill="#fde68a"/>
+  <text x="140" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#374151">API Documentation</text>
+  <text x="140" y="375" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Updated 1 day ago • 87% match</text>
+  
+  <rect x="60" y="420" width="440" height="80" rx="6" fill="#f3f4f6"/>
+  <rect x="80" y="440" width="40" height="40" rx="4" fill="#bbf7d0"/>
+  <text x="140" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#374151">Meeting Notes - Q4 Planning</text>
+  <text x="140" y="475" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Updated 3 days ago • 82% match</text>
+  
+  <!-- Sidebar -->
+  <rect x="540" y="200" width="220" height="360" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="560" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151">AI Assistant</text>
+  
+  <!-- Chat Messages -->
+  <rect x="560" y="250" width="180" height="40" rx="20" fill="#eff6ff"/>
+  <text x="570" y="275" font-family="Arial, sans-serif" font-size="12" fill="#1e40af">How can I help you find information?</text>
+  
+  <rect x="580" y="310" width="160" height="40" rx="20" fill="#f3f4f6"/>
+  <text x="590" y="335" font-family="Arial, sans-serif" font-size="12" fill="#374151">Show me the latest API changes</text>
+  
+  <!-- Analytics -->
+  <text x="560" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#374151">Quick Stats</text>
+  <text x="560" y="425" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Documents indexed: 1,247</text>
+  <text x="560" y="445" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Searches today: 89</text>
+  <text x="560" y="465" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Avg. response time: 0.3s</text>
+</svg>

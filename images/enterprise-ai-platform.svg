@@ -1,0 +1,61 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Server Rack -->
+  <rect x="50" y="80" width="80" height="140" rx="8" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- Server Units -->
+  <rect x="60" y="90" width="60" height="20" rx="2" fill="#4b5563"/>
+  <rect x="60" y="120" width="60" height="20" rx="2" fill="#4b5563"/>
+  <rect x="60" y="150" width="60" height="20" rx="2" fill="#4b5563"/>
+  <rect x="60" y="180" width="60" height="20" rx="2" fill="#4b5563"/>
+  
+  <!-- LED Indicators -->
+  <circle cx="115" cy="100" r="3" fill="#10b981"/>
+  <circle cx="115" cy="130" r="3" fill="#10b981"/>
+  <circle cx="115" cy="160" r="3" fill="#f59e0b"/>
+  <circle cx="115" cy="190" r="3" fill="#10b981"/>
+  
+  <!-- Cloud Connection -->
+  <path d="M150 150 Q170 140 190 150" stroke="#3b82f6" stroke-width="3" fill="none"/>
+  <path d="M150 160 Q170 170 190 160" stroke="#3b82f6" stroke-width="3" fill="none"/>
+  
+  <!-- Cloud -->
+  <ellipse cx="240" cy="120" rx="40" ry="25" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <ellipse cx="220" cy="130" rx="25" ry="15" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <ellipse cx="260" cy="135" rx="30" ry="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- AI Models -->
+  <rect x="300" y="60" width="80" height="40" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="340" y="85" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6" text-anchor="middle">AI Models</text>
+  
+  <!-- Analytics Dashboard -->
+  <rect x="300" y="120" width="80" height="60" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="340" y="140" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#065f46" text-anchor="middle">Analytics</text>
+  
+  <!-- Mini Charts -->
+  <polyline points="310,150 320,145 330,155 340,140 350,150 360,145 370,155" stroke="#10b981" stroke-width="2" fill="none"/>
+  <rect x="310" y="160" width="8" height="15" fill="#10b981"/>
+  <rect x="322" y="155" width="8" height="20" fill="#10b981"/>
+  <rect x="334" y="150" width="8" height="25" fill="#10b981"/>
+  <rect x="346" y="165" width="8" height="10" fill="#10b981"/>
+  <rect x="358" y="160" width="8" height="15" fill="#10b981"/>
+  
+  <!-- API Gateway -->
+  <rect x="300" y="200" width="80" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="340" y="225" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">API Gateway</text>
+  
+  <!-- Connection Lines -->
+  <line x1="280" y1="80" x2="300" y2="80" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="280" y1="150" x2="300" y2="150" stroke="#10b981" stroke-width="2"/>
+  <line x1="280" y1="220" x2="300" y2="220" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151" text-anchor="middle">Enterprise AI Platform</text>
+  
+  <!-- Monitoring Indicators -->
+  <text x="60" y="270" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">99.9% Uptime</text>
+  <text x="160" y="270" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Real-time Monitoring</text>
+  <text x="280" y="270" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Auto-scaling</text>
+</svg>
