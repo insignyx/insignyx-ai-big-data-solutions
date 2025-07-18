@@ -73,8 +73,16 @@
   <!-- Hero Section -->
   <section class="relative h-screen overflow-hidden">
     <!-- Background Video -->
-    <video id="heroVideo" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <video id="heroVideo" 
+           autoplay 
+           muted 
+           loop 
+           playsinline 
+           preload="auto"
+           class="absolute inset-0 w-full h-full object-cover z-0"
+           style="background: #1a1a1a;">
       <source src="video_webpage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
     
     <!-- Animated Gradient Fallback Background (hidden by default) -->
@@ -93,23 +101,87 @@
     <!-- Video Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
     
-    <!-- Simplified Video Error Handling -->
+    <!-- Enhanced Video Handling -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const video = document.getElementById('heroVideo');
         const fallback = document.getElementById('fallbackBackground');
+        let videoAttempted = false;
         
-        // Only show fallback if video fails to load
-        video.addEventListener('error', function() {
-          console.log('Video failed to load, showing fallback');
+        console.log('Video element:', video);
+        console.log('Video src:', video.querySelector('source').src);
+        
+        // Function to show fallback
+        function showFallback(reason) {
+          console.log('Showing fallback background. Reason:', reason);
           video.style.display = 'none';
           fallback.style.display = 'block';
+        }
+        
+        // Function to attempt video play
+        function attemptVideoPlay() {
+          if (videoAttempted) return;
+          videoAttempted = true;
+          
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              console.log('Video is playing successfully');
+            }).catch(error => {
+              console.log('Video autoplay failed:', error);
+              showFallback('Autoplay failed');
+            });
+          }
+        }
+        
+        // Video event listeners
+        video.addEventListener('loadstart', function() {
+          console.log('Video loading started');
         });
         
-        // Log when video loads successfully
-        video.addEventListener('loadeddata', function() {
-          console.log('Video loaded successfully');
+        video.addEventListener('loadedmetadata', function() {
+          console.log('Video metadata loaded. Duration:', video.duration);
         });
+        
+        video.addEventListener('loadeddata', function() {
+          console.log('Video data loaded successfully');
+          attemptVideoPlay();
+        });
+        
+        video.addEventListener('canplay', function() {
+          console.log('Video can start playing');
+        });
+        
+        video.addEventListener('playing', function() {
+          console.log('Video is now playing');
+        });
+        
+        video.addEventListener('error', function(e) {
+          console.log('Video error occurred:', e);
+          showFallback('Video error');
+        });
+        
+        video.addEventListener('stalled', function() {
+          console.log('Video loading stalled');
+        });
+        
+        // Timeout fallback - if video doesn't start playing within 5 seconds
+        setTimeout(function() {
+          if (video.paused && !video.ended) {
+            console.log('Video timeout - showing fallback');
+            showFallback('Timeout');
+          }
+        }, 5000);
+        
+        // Try to load the video
+        video.load();
+        
+        // Click to play fallback for browsers that block autoplay
+        document.addEventListener('click', function() {
+          if (video.paused) {
+            attemptVideoPlay();
+          }
+        }, { once: true });
       });
     </script>
     
