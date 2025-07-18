@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" />
+  
+  <!-- Brain icon with connections representing AI consulting -->
+  <g fill="url(#iconGradient)" filter="url(#shadow)">
+    <!-- Brain outline -->
+    <path d="M100,50 C130,50 150,70 150,100 C150,130 130,150 100,150 C70,150 50,130 50,100 C50,70 70,50 100,50 Z" fill="none" stroke="url(#iconGradient)" stroke-width="4" />
+    
+    <!-- Brain details -->
+    <path d="M100,60 C115,60 125,70 125,85 C125,95 120,105 110,110 C120,115 125,125 125,135 C125,145 115,155 100,155" fill="none" stroke="url(#iconGradient)" stroke-width="3" />
+    <path d="M100,60 C85,60 75,70 75,85 C75,95 80,105 90,110 C80,115 75,125 75,135 C75,145 85,155 100,155" fill="none" stroke="url(#iconGradient)" stroke-width="3" />
+    
+    <!-- Connection nodes -->
+    <circle cx="70" cy="80" r="5" />
+    <circle cx="130" cy="80" r="5" />
+    <circle cx="70" cy="120" r="5" />
+    <circle cx="130" cy="120" r="5" />
+    <circle cx="100" cy="70" r="5" />
+    <circle cx="100" cy="130" r="5" />
+    
+    <!-- Connection lines -->
+    <line x1="70" y1="80" x2="100" y2="70" stroke="url(#iconGradient)" stroke-width="2" />
+    <line x1="130" y1="80" x2="100" y2="70" stroke="url(#iconGradient)" stroke-width="2" />
+    <line x1="70" y1="120" x2="100" y2="130" stroke="url(#iconGradient)" stroke-width="2" />
+    <line x1="130" y1="120" x2="100" y2="130" stroke="url(#iconGradient)" stroke-width="2" />
+    <line x1="70" y1="80" x2="70" y2="120" stroke="url(#iconGradient)" stroke-width="2" />
+    <line x1="130" y1="80" x2="130" y2="120" stroke="url(#iconGradient)" stroke-width="2" />
+    
+    <!-- Document/Strategy elements -->
+    <rect x="85" y="90" width="30" height="20" rx="2" fill="white" stroke="url(#iconGradient)" stroke-width="1" />
+    <line x1="90" y1="95" x2="110" y2="95" stroke="url(#iconGradient)" stroke-width="1" />
+    <line x1="90" y1="100" x2="110" y2="100" stroke="url(#iconGradient)" stroke-width="1" />
+    <line x1="90" y1="105" x2="105" y2="105" stroke="url(#iconGradient)" stroke-width="1" />
+  </g>
+</svg>
