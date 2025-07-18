@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     /* Custom styles for navigation dropdowns and carousels */
     /* Add any additional custom CSS here */
@@ -25,7 +26,8 @@
              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <span class="hidden" style="display:none;">insignyx</span>
       </a>
-      <nav>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
         <ul class="flex space-x-8">
           <li class="relative">
             <a href="services.html" class="font-semibold hover:text-green-600">Services</a>
@@ -43,6 +45,23 @@
           <li><a href="contact.html" class="font-semibold hover:text-green-600">Contact</a></li>
         </ul>
       </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="mobile-menu-button md:hidden">
+        <i class="fas fa-bars text-gray-800 text-2xl"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+      <a href="services.html" class="font-semibold">Services</a>
+      <a href="solutions.html" class="font-semibold">Solutions</a>
+      <a href="products.html" class="font-semibold">Products</a>
+      <a href="about.html" class="font-semibold">About</a>
+      <a href="resources.html" class="font-semibold">Resources</a>
+      <a href="case-studies.html" class="font-semibold">Case studies</a>
+      <a href="career.html" class="font-semibold">Career</a>
+      <a href="contact.html" class="font-semibold">Contact</a>
     </div>
   </header>
 
@@ -52,13 +71,13 @@
       <source src="./video_webpage.mp4" type="video/mp4" />
     </video>
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="container mx-auto relative z-10 flex flex-col justify-center h-full px-6 text-white">
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">AI Solution provider & Big Data Experts Company</h1>
-      <hr class="border-green-500 border-2 w-24 mb-4" />
-      <p class="text-3xl md:text-5xl font-extrabold mb-8">Driving changes through <br />AI & Data solutions</p>
-      <div class="flex space-x-4">
-        <a href="case-studies.html" class="bg-transparent border border-white text-white py-3 px-6 rounded hover:bg-white hover:text-black transition">Read case studies</a>
-        <a href="contact.html" class="bg-green-600 py-3 px-6 rounded hover:bg-green-700 transition">Let’s talk</a>
+    <div class="container mx-auto relative z-10 flex flex-col justify-center h-full px-4 md:px-6 text-white">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-3 md:mb-4">AI Solution provider & Big Data Experts Company</h1>
+      <hr class="border-green-500 border-2 w-16 md:w-24 mb-3 md:mb-4" />
+      <p class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-6 md:mb-8">Driving changes through <br class="hidden sm:block" />AI & Data solutions</p>
+      <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+        <a href="case-studies.html" class="bg-transparent border border-white text-white py-3 px-6 rounded hover:bg-white hover:text-black transition text-center sm:text-left">Read case studies</a>
+        <a href="contact.html" class="bg-green-600 py-3 px-6 rounded hover:bg-green-700 transition text-center sm:text-left">Let's talk</a>
       </div>
     </div>
   </section>
@@ -67,67 +86,67 @@
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold mb-8 text-center">Our core capabilities</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">AI Consulting</h3>
           <p class="text-gray-700 mb-4">Create the AI strategy with expert guidance, identify the most impactful AI opportunities for your business and chart a clear path to AI implementation.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Generative AI Development</h3>
           <p class="text-gray-700 mb-4">Empower your systems to interpret and act on visual data with human-like accuracy to enhance decision-making and automate visual tasks.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">ContextClue</h3>
           <p class="text-gray-700 mb-4">Empower your workforce with an intelligent AI assistant that enhances knowledge management processes, enabling seamless information retrieval, semantic search, and automated summarization.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Computer Vision Solutions</h3>
           <p class="text-gray-700 mb-4">Leverage our expertise to adapt cutting-edge general-purpose Generative AI models into tailored solutions that address your unique business challenges.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">Data Engineering Services</h3>
           <p class="text-gray-700 mb-4">Transform raw data into actionable insights with robust data pipelines and infrastructure, enabling data-driven decision-making across your organization.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <div class="bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
           <h3 class="text-xl font-semibold mb-2">MLOps</h3>
           <p class="text-gray-700 mb-4">Streamline your machine learning lifecycle from development to deployment, ensuring faster time-to-market and reliable, scalable AI solutions.</p>
-          <a href="#" class="text-green-600 font-semibold hover:underline">Check</a>
+          <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Check <i class="fas fa-arrow-right ml-1"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center">Customer stories</h2>
-      <div class="space-y-8">
-        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="https://cdn.example.com/uploads/2023/11/Text-Summarization-with-the-OpenAI-API-featured-image-1.jpg" alt="Text Summarization with the OpenAI API" class="w-full md:w-1/3 rounded" />
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-6">
+      <h2 class="text-3xl font-bold mb-6 md:mb-8 text-center">Customer stories</h2>
+      <div class="space-y-6 md:space-y-8">
+        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
+          <img src="https://cdn.example.com/uploads/2023/11/Text-Summarization-with-the-OpenAI-API-featured-image-1.jpg" alt="Text Summarization with the OpenAI API" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded" />
           <div class="mt-4 md:mt-0 md:w-2/3">
             <h3 class="text-xl font-semibold mb-2">Text Summarization with the OpenAI API</h3>
             <p class="text-gray-700 mb-4">Text summarization plays a crucial role in news aggregation, document indexing, information retrieval, and content generation by helping users quickly grasp the essence of content without reading the entire text.</p>
-            <a href="#" class="text-green-600 font-semibold hover:underline">Read more</a>
+            <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Read more <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="https://cdn.example.com/uploads/2024/02/featured-images_blog-_43_.webp" alt="Passenger Experience AI Assistance Bot" class="w-full md:w-1/3 rounded" />
+        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
+          <img src="https://cdn.example.com/uploads/2024/02/featured-images_blog-_43_.webp" alt="Passenger Experience AI Assistance Bot" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded" />
           <div class="mt-4 md:mt-0 md:w-2/3">
             <h3 class="text-xl font-semibold mb-2">Passenger Experience AI Assistance Bot</h3>
             <p class="text-gray-700 mb-4">Aiming to upgrade air transport communications and information technology, the client embarked on an ambitious project aimed at simplifying the airport experience for passengers.</p>
-            <a href="#" class="text-green-600 font-semibold hover:underline">Read more</a>
+            <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Read more <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <img src="https://cdn.example.com/uploads/2022/06/background-images_www-2-1.webp" alt="AI-Based Demand Forecasting in Parcel Delivery" class="w-full md:w-1/3 rounded" />
+        <div class="flex flex-col md:flex-row md:space-x-8 bg-white p-4 md:p-6 rounded shadow hover:shadow-lg transition">
+          <img src="https://cdn.example.com/uploads/2022/06/background-images_www-2-1.webp" alt="AI-Based Demand Forecasting in Parcel Delivery" class="w-full md:w-1/3 h-48 md:h-auto object-cover rounded" />
           <div class="mt-4 md:mt-0 md:w-2/3">
             <h3 class="text-xl font-semibold mb-2">AI-Based Demand Forecasting in Parcel Delivery</h3>
             <p class="text-gray-700 mb-4">Demand forecasting plays a crucial role in the efficient and effective operation of parcel delivery services, helping companies accurately predict demand and optimize resources.</p>
-            <a href="#" class="text-green-600 font-semibold hover:underline">Read more</a>
+            <a href="#" class="text-green-600 font-semibold hover:underline flex items-center">Read more <i class="fas fa-arrow-right ml-1"></i></a>
           </div>
         </div>
       </div>
@@ -135,11 +154,11 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white border-t mt-16">
-    <div class="container mx-auto px-6 py-12">
-      <div class="flex flex-wrap justify-between">
-        <div class="w-full md:w-1/4 mb-8 md:mb-0">
-          <h3 class="font-bold mb-4">Sitemap</h3>
+  <footer class="bg-white border-t mt-8 md:mt-16">
+    <div class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="col-span-1">
+          <h3 class="font-bold mb-3 md:mb-4">Sitemap</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="about.html" class="hover:text-green-600">About</a></li>
             <li><a href="blog.html" class="hover:text-green-600">Blog</a></li>
@@ -149,8 +168,8 @@
             <li><a href="contact.html" class="hover:text-green-600">Let's talk</a></li>
           </ul>
         </div>
-        <div class="w-full md:w-1/4 mb-8 md:mb-0">
-          <h3 class="font-bold mb-4">Services</h3>
+        <div class="col-span-1">
+          <h3 class="font-bold mb-3 md:mb-4">Services</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="services.html" class="hover:text-green-600">All Services</a></li>
             <li><a href="services.html#discover" class="hover:text-green-600">Discover</a></li>
@@ -159,15 +178,15 @@
             <li><a href="services.html#deploy" class="hover:text-green-600">Deploy</a></li>
           </ul>
         </div>
-        <div class="w-full md:w-1/4 mb-8 md:mb-0">
-          <h3 class="font-bold mb-4">Solutions</h3>
+        <div class="col-span-1">
+          <h3 class="font-bold mb-3 md:mb-4">Solutions</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#" class="hover:text-green-600">Technologies</a></li>
             <li><a href="#" class="hover:text-green-600">Industries</a></li>
           </ul>
         </div>
-        <div class="w-full md:w-1/4">
-          <h3 class="font-bold mb-4">Contact</h3>
+        <div class="col-span-1">
+          <h3 class="font-bold mb-3 md:mb-4">Contact</h3>
           <address class="not-italic text-sm space-y-2">
             <p>Insignyx Warsaw - HQ</p>
             <p>Świeradowska 47 02-662</p>
@@ -175,13 +194,13 @@
             <p>Email: <a href="mailto:hi@insignyx.com" class="hover:text-green-600">hi@insignyx.com</a></p>
           </address>
           <div class="flex space-x-4 mt-4">
-            <a href="#" aria-label="Twitter" class="hover:text-green-600">Twitter</a>
-            <a href="#" aria-label="LinkedIn" class="hover:text-green-600">LinkedIn</a>
-            <a href="#" aria-label="Facebook" class="hover:text-green-600">Facebook</a>
+            <a href="#" aria-label="Twitter" class="hover:text-green-600"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-green-600"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Facebook" class="hover:text-green-600"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
-      <div class="mt-8 text-center text-sm text-gray-500">&copy; 2025 Insignyx sp. z o.o. All rights reserved.</div>
+      <div class="mt-6 md:mt-8 text-center text-sm text-gray-500">&copy; 2025 Insignyx sp. z o.o. All rights reserved.</div>
     </div>
   </footer>
 
