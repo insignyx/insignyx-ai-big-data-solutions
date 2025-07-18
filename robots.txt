@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://insignyx.com/sitemap.xml
+
+# Disallow access to sensitive files and directories
+Disallow: /scripts/
+Disallow: /*.md$
+Disallow: /package.json
+Disallow: /*.vbs$
+Disallow: /*.bat$
+Disallow: /*.py$
+Disallow: /*.js$
+Disallow: /node_modules/
+
+# Allow access to important resources
+Allow: /css/
+Allow: /js/script.js
+Allow: /images/
+Allow: /favicon.ico

@@ -4,13 +4,22 @@ const path = require('path');
 const app = express();
 const PORT = 8000;
 
+// SEO: Redirect www to non-www for consistency
+app.use((req, res, next) => {
+  if (req.headers.host && req.headers.host.startsWith('www.')) {
+    const redirectUrl = `${req.protocol}://${req.headers.host.slice(4)}${req.url}`;
+    return res.redirect(301, redirectUrl);
+  }
+  next();
+});
+
 // Apply security headers with helmet
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com'],
+        scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com', 'https://cdn.tailwindcss.com'],
         styleSrc: ["'self'", 'https://fonts.googleapis.com', 'https://cdnjs.cloudflare.com', "'unsafe-inline'"],
         fontSrc: ["'self'", 'https://fonts.gstatic.com', 'https://cdnjs.cloudflare.com'],
         imgSrc: ["'self'", 'data:'],
