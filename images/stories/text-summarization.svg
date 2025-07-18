@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" />
+  
+  <!-- Text Summarization elements -->
+  <g filter="url(#shadow)">
+    <!-- Document with text -->
+    <rect x="50" y="40" width="100" height="120" rx="5" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+    
+    <!-- Original text lines -->
+    <line x1="60" y1="55" x2="140" y2="55" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="65" x2="140" y2="65" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="75" x2="140" y2="75" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="85" x2="140" y2="85" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="95" x2="140" y2="95" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="105" x2="140" y2="105" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="115" x2="140" y2="115" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="125" x2="140" y2="125" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="135" x2="140" y2="135" stroke="url(#iconGradient)" stroke-width="1.5" />
+    <line x1="60" y1="145" x2="140" y2="145" stroke="url(#iconGradient)" stroke-width="1.5" />
+    
+    <!-- Summarization process -->
+    <g filter="url(#glow)">
+      <!-- Arrow pointing to summary -->
+      <path d="M150,100 C170,100 170,100 170,120 C170,140 170,140 150,140" fill="none" stroke="url(#iconGradient)" stroke-width="2" stroke-linecap="round" />
+      
+      <!-- Summary document -->
+      <rect x="110" y="140" width="60" height="40" rx="3" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="120" y1="150" x2="160" y2="150" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <line x1="120" y1="160" x2="160" y2="160" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <line x1="120" y1="170" x2="150" y2="170" stroke="url(#iconGradient)" stroke-width="1.5" />
+      
+      <!-- AI processing element -->
+      <circle cx="170" cy="100" r="15" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <path d="M165,95 C165,90 175,90 175,95 C175,100 165,100 165,95" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <path d="M165,105 C165,100 175,100 175,105 C175,110 165,110 165,105" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <line x1="170" y1="85" x2="170" y2="115" stroke="url(#iconGradient)" stroke-width="1.5" />
+    </g>
+    
+    <!-- Highlight elements -->
+    <rect x="60" y="65" width="80" height="10" fill="url(#iconGradient)" opacity="0.2" rx="2" />
+    <rect x="60" y="95" width="60" height="10" fill="url(#iconGradient)" opacity="0.2" rx="2" />
+    <rect x="60" y="125" width="70" height="10" fill="url(#iconGradient)" opacity="0.2" rx="2" />
+    
+    <!-- OpenAI logo stylized -->
+    <g transform="translate(30, 30)">
+      <circle cx="0" cy="0" r="12" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <path d="M-5,-5 C-5,-8 5,-8 5,-5 C5,0 0,8 0,8" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" stroke-linecap="round" />
+      <circle cx="0" cy="10" r="1" fill="url(#iconGradient)" />
+    </g>
+  </g>
+</svg>

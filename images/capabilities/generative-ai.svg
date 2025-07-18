@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" />
+  
+  <!-- Generative AI elements -->
+  <g filter="url(#shadow)">
+    <!-- Central AI core -->
+    <circle cx="100" cy="100" r="25" fill="white" stroke="url(#iconGradient)" stroke-width="3" />
+    
+    <!-- Generated content elements -->
+    <g filter="url(#glow)">
+      <!-- Code/text generation -->
+      <rect x="60" y="50" width="30" height="20" rx="3" fill="white" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <line x1="65" y1="55" x2="85" y2="55" stroke="url(#iconGradient)" stroke-width="1" />
+      <line x1="65" y1="60" x2="80" y2="60" stroke="url(#iconGradient)" stroke-width="1" />
+      <line x1="65" y1="65" x2="85" y2="65" stroke="url(#iconGradient)" stroke-width="1" />
+      
+      <!-- Image generation -->
+      <rect x="120" y="60" width="30" height="25" rx="3" fill="white" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <path d="M125,75 L130,70 L135,73 L140,65 L145,75 Z" fill="url(#iconGradient)" />
+      <circle cx="130" cy="67" r="2" fill="url(#iconGradient)" />
+      
+      <!-- Audio/music generation -->
+      <rect x="60" y="130" width="30" height="20" rx="3" fill="white" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <path d="M65,140 L70,135 L75,145 L80,138 L85,140" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" />
+      
+      <!-- 3D/model generation -->
+      <rect x="120" y="120" width="30" height="30" rx="3" fill="white" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <path d="M135,125 L145,135 L135,145 L125,135 Z" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" />
+      <line x1="135" y1="125" x2="135" y2="145" stroke="url(#iconGradient)" stroke-width="1" />
+      <line x1="125" y1="135" x2="145" y2="135" stroke="url(#iconGradient)" stroke-width="1" />
+    </g>
+    
+    <!-- Connection lines from AI core to generated content -->
+    <line x1="100" y1="100" x2="75" y2="70" stroke="url(#iconGradient)" stroke-width="1.5" stroke-dasharray="2,2" />
+    <line x1="100" y1="100" x2="120" y2="75" stroke="url(#iconGradient)" stroke-width="1.5" stroke-dasharray="2,2" />
+    <line x1="100" y1="100" x2="75" y2="130" stroke="url(#iconGradient)" stroke-width="1.5" stroke-dasharray="2,2" />
+    <line x1="100" y1="100" x2="120" y2="135" stroke="url(#iconGradient)" stroke-width="1.5" stroke-dasharray="2,2" />
+    
+    <!-- AI core details -->
+    <circle cx="100" cy="100" r="15" fill="none" stroke="url(#iconGradient)" stroke-width="1.5" stroke-dasharray="3,3" />
+    <path d="M95,95 L105,105 M95,105 L105,95" stroke="url(#iconGradient)" stroke-width="2" />
+  </g>
+</svg>

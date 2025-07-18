@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bgGradient)" />
+  
+  <!-- Data Engineering elements -->
+  <g filter="url(#shadow)">
+    <!-- Data pipeline flow -->
+    <path d="M40,100 C60,70 80,130 100,100 C120,70 140,130 160,100" fill="none" stroke="url(#iconGradient)" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Data source elements -->
+    <g transform="translate(40, 100)" filter="url(#glow)">
+      <rect x="-15" y="-15" width="30" height="30" rx="5" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="-10" y1="-5" x2="10" y2="-5" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="-10" y1="0" x2="5" y2="0" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="-10" y1="5" x2="10" y2="5" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="-10" y1="10" x2="7" y2="10" stroke="url(#iconGradient)" stroke-width="2" />
+    </g>
+    
+    <!-- Data transformation -->
+    <g transform="translate(100, 100)" filter="url(#glow)">
+      <circle cx="0" cy="0" r="18" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="url(#iconGradient)" stroke-width="2" />
+      <circle cx="0" cy="0" r="5" fill="url(#iconGradient)" />
+    </g>
+    
+    <!-- Data warehouse/destination -->
+    <g transform="translate(160, 100)" filter="url(#glow)">
+      <path d="M-15,-15 L15,-15 L15,15 L-15,15 Z" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <path d="M-15,-15 L0,-25 L15,-15" fill="white" stroke="url(#iconGradient)" stroke-width="2" />
+      <line x1="-15" y1="-5" x2="15" y2="-5" stroke="url(#iconGradient)" stroke-width="1" />
+      <line x1="-15" y1="5" x2="15" y2="5" stroke="url(#iconGradient)" stroke-width="1" />
+    </g>
+    
+    <!-- Data flow indicators -->
+    <circle cx="70" cy="85" r="5" fill="white" stroke="url(#iconGradient)" stroke-width="1" />
+    <circle cx="130" cy="85" r="5" fill="white" stroke="url(#iconGradient)" stroke-width="1" />
+    
+    <!-- Binary/data elements -->
+    <text x="65" y="60" font-family="monospace" font-size="8" fill="url(#iconGradient)">01001</text>
+    <text x="125" y="60" font-family="monospace" font-size="8" fill="url(#iconGradient)">10110</text>
+    <text x="65" y="140" font-family="monospace" font-size="8" fill="url(#iconGradient)">10010</text>
+    <text x="125" y="140" font-family="monospace" font-size="8" fill="url(#iconGradient)">01101</text>
+    
+    <!-- Connection lines -->
+    <line x1="70" y1="85" x2="70" y2="65" stroke="url(#iconGradient)" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="130" y1="85" x2="130" y2="65" stroke="url(#iconGradient)" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="70" y1="115" x2="70" y2="135" stroke="url(#iconGradient)" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="130" y1="115" x2="130" y2="135" stroke="url(#iconGradient)" stroke-width="1" stroke-dasharray="2,2" />
+  </g>
+</svg>
