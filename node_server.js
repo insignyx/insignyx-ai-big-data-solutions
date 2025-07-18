@@ -30,6 +30,15 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
   
+  // SEO: Handle www to non-www redirect
+  const host = req.headers.host;
+  if (host && host.startsWith('www.')) {
+    const redirectUrl = `http://${host.slice(4)}${req.url}`;
+    res.writeHead(301, { 'Location': redirectUrl, ...securityHeaders });
+    res.end();
+    return;
+  }
+  
   // Handle favicon.ico requests directly to prevent remote requests
   if (req.url === '/favicon.ico') {
     // Serve an empty favicon to prevent browser from requesting it elsewhere
