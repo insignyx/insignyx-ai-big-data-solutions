@@ -11,6 +11,19 @@
   transition: opacity 0.3s ease;
 }
 
+/* Animation delay classes for hero particles */
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
 /* Additional custom styles can be added here */
 
 /* Modern green color scheme overrides */
