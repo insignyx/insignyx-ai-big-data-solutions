@@ -1,0 +1,69 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Dashboard Container -->
+  <rect x="30" y="50" width="340" height="200" rx="12" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="30" y="50" width="340" height="40" rx="12" fill="#1e40af"/>
+  <rect x="30" y="70" width="340" height="20" fill="#1e40af"/>
+  <text x="50" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Data Analytics Dashboard</text>
+  
+  <!-- Navigation Tabs -->
+  <rect x="250" y="55" width="50" height="25" rx="4" fill="#3b82f6"/>
+  <rect x="310" y="55" width="50" height="25" rx="4" fill="#60a5fa"/>
+  <text x="275" y="72" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Overview</text>
+  <text x="335" y="72" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Reports</text>
+  
+  <!-- Main Chart Area -->
+  <rect x="50" y="110" width="200" height="120" rx="6" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  
+  <!-- Line Chart -->
+  <polyline points="60,200 80,180 100,160 120,140 140,120 160,100 180,110 200,90 220,80 240,70" 
+            stroke="#3b82f6" stroke-width="3" fill="none"/>
+  
+  <!-- Data Points -->
+  <circle cx="80" cy="180" r="3" fill="#3b82f6"/>
+  <circle cx="120" cy="140" r="3" fill="#3b82f6"/>
+  <circle cx="160" cy="100" r="3" fill="#3b82f6"/>
+  <circle cx="200" cy="90" r="3" fill="#3b82f6"/>
+  <circle cx="240" cy="70" r="3" fill="#3b82f6"/>
+  
+  <!-- Y-axis Labels -->
+  <text x="45" y="115" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="end">100K</text>
+  <text x="45" y="140" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="end">75K</text>
+  <text x="45" y="165" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="end">50K</text>
+  <text x="45" y="190" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="end">25K</text>
+  <text x="45" y="215" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="end">0</text>
+  
+  <!-- X-axis Labels -->
+  <text x="80" y="245" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Jan</text>
+  <text x="120" y="245" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Feb</text>
+  <text x="160" y="245" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Mar</text>
+  <text x="200" y="245" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">Apr</text>
+  <text x="240" y="245" font-family="Arial, sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">May</text>
+  
+  <!-- KPI Cards -->
+  <rect x="270" y="110" width="80" height="35" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="310" y="125" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#065f46" text-anchor="middle">Revenue</text>
+  <text x="310" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#047857" text-anchor="middle">$2.4M</text>
+  
+  <rect x="270" y="155" width="80" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="310" y="170" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#92400e" text-anchor="middle">Users</text>
+  <text x="310" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#d97706" text-anchor="middle">45.2K</text>
+  
+  <rect x="270" y="200" width="80" height="35" rx="6" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="310" y="215" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#5b21b6" text-anchor="middle">Conversion</text>
+  <text x="310" y="230" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c3aed" text-anchor="middle">12.8%</text>
+  
+  <!-- Bar Chart Mini -->
+  <rect x="60" y="260" width="15" height="20" fill="#3b82f6"/>
+  <rect x="80" y="255" width="15" height="25" fill="#3b82f6"/>
+  <rect x="100" y="250" width="15" height="30" fill="#3b82f6"/>
+  <rect x="120" y="245" width="15" height="35" fill="#3b82f6"/>
+  <rect x="140" y="240" width="15" height="40" fill="#3b82f6"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151" text-anchor="middle">Data Analytics Suite</text>
+</svg>

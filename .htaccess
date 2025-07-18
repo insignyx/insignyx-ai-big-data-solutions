@@ -1,13 +1,14 @@
-# SEO Optimization - Redirect www to non-www
+# SEO Optimization - Redirect www to non-www and force HTTPS in one step
 RewriteEngine On
 
-# Force HTTPS (if using SSL)
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Redirect www to non-www
+# Redirect www to non-www with HTTPS in a single step
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Force HTTPS for non-www requests
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Remove trailing slash from URLs (except for directories)
 RewriteCond %{REQUEST_FILENAME} !-d
