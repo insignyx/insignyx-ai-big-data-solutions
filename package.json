@@ -1,0 +1,15 @@
+{
+  "name": "insignyx-ai-website",
+  "version": "1.0.0",
+  "description": "Insignyx AI Big Data Solutions Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
+  },
+  "author": "Insignyx AI",
+  "license": "UNLICENSED"
+}
