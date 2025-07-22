@@ -24,6 +24,8 @@ app.use(
         fontSrc: ["'self'", 'https://fonts.gstatic.com', 'https://cdnjs.cloudflare.com'],
         imgSrc: ["'self'", 'data:'],
         connectSrc: ["'self'"],
+        frameSrc: ['https://www.youtube.com'],
+        mediaSrc: ['https://www.youtube.com'],
       },
     },
     // Allow inline styles which are used in the project

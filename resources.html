@@ -291,7 +291,7 @@
   </div>
 
   <script>
-    // Function to open YouTube videos in embedded modal
+    // Function to open YouTube videos with fallback handling
     function openYouTubeVideo(youtubeUrl) {
       console.log('openYouTubeVideo called with URL:', youtubeUrl);
       
@@ -299,11 +299,13 @@
       const videoId = extractYouTubeVideoId(youtubeUrl);
       if (!videoId) {
         console.error('Could not extract video ID from URL:', youtubeUrl);
+        // Fallback to direct link
+        window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
         return;
       }
       
-      // Open the video in embedded modal
-      openEmbeddedVideo(videoId);
+      // Try to open embedded video, with fallback to direct link
+      openEmbeddedVideoWithFallback(videoId, youtubeUrl);
     }
     
     // Function to extract YouTube video ID from URL
@@ -313,27 +315,13 @@
       return match ? match[1] : null;
     }
     
-    // Function to open embedded YouTube video in modal
-    function openEmbeddedVideo(videoId) {
+    // Function to open embedded YouTube video with fallback
+    function openEmbeddedVideoWithFallback(videoId, originalUrl) {
       const modal = document.getElementById('videoModal');
       const videoContainer = document.getElementById('videoContainer');
       const videoTitle = document.getElementById('videoTitle');
       
-      // Create YouTube embed iframe
-      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-      videoContainer.innerHTML = `
-        <iframe 
-          width="100%" 
-          height="400" 
-          src="${embedUrl}" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen
-          class="rounded-lg">
-        </iframe>
-      `;
-      
-      // Set title based on video ID (you can customize this)
+      // Set title based on video ID
       const titles = {
         'tcF62_Xhf1s': 'Getting Started with AI',
         'Ik2rAKROVbI': 'Building ML Pipelines',
@@ -341,8 +329,95 @@
       };
       videoTitle.textContent = titles[videoId] || 'Video Tutorial';
       
+      // Create container with both embed attempt and fallback
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      videoContainer.innerHTML = `
+        <div class="text-center mb-4">
+          <p class="text-gray-600 mb-4">Loading video...</p>
+          <div id="embedContainer">
+            <iframe 
+              id="youtubeEmbed"
+              width="100%" 
+              height="400" 
+              src="${embedUrl}" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              class="rounded-lg"
+              onload="handleEmbedSuccess()"
+              onerror="handleEmbedError('${originalUrl}')">
+            </iframe>
+          </div>
+          <div id="fallbackContainer" class="hidden">
+            <div class="bg-gray-100 rounded-lg p-8 text-center">
+              <div class="mb-4">
+                <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Video Embed Blocked</h3>
+                <p class="text-gray-600 mb-4">Due to security settings, the video cannot be embedded. Click below to watch on YouTube.</p>
+                <a href="${originalUrl}" target="_blank" rel="noopener,noreferrer" 
+                   class="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      
+      // Set a timeout to check if embed loaded successfully
+      setTimeout(() => {
+        checkEmbedStatus(originalUrl);
+      }, 3000);
+    }
+    
+    // Function to handle successful embed loading
+    function handleEmbedSuccess() {
+      console.log('YouTube embed loaded successfully');
+      document.querySelector('#videoContainer p').style.display = 'none';
+    }
+    
+    // Function to handle embed errors
+    function handleEmbedError(originalUrl) {
+      console.log('YouTube embed failed, showing fallback');
+      showFallback(originalUrl);
+    }
+    
+    // Function to check embed status and show fallback if needed
+    function checkEmbedStatus(originalUrl) {
+      const iframe = document.getElementById('youtubeEmbed');
+      if (iframe) {
+        try {
+          // Try to access iframe content to see if it loaded
+          const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!iframeDoc || iframeDoc.body.innerHTML === '') {
+            showFallback(originalUrl);
+          } else {
+            document.querySelector('#videoContainer p').style.display = 'none';
+          }
+        } catch (e) {
+          // Cross-origin restrictions mean embed is working
+          document.querySelector('#videoContainer p').style.display = 'none';
+        }
+      }
+    }
+    
+    // Function to show fallback option
+    function showFallback(originalUrl) {
+      const embedContainer = document.getElementById('embedContainer');
+      const fallbackContainer = document.getElementById('fallbackContainer');
+      const loadingText = document.querySelector('#videoContainer p');
+      
+      if (embedContainer) embedContainer.style.display = 'none';
+      if (fallbackContainer) fallbackContainer.classList.remove('hidden');
+      if (loadingText) loadingText.style.display = 'none';
     }
 
     // Keep the existing modal functionality for potential future use
