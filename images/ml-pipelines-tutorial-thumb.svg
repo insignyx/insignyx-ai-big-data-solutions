@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="240" fill="#f59e0b"/>
+  
+  <!-- Title -->
+  <text x="200" y="60" text-anchor="middle" fill="white" font-family="Arial" font-size="28" font-weight="bold">ML Pipelines</text>
+  <text x="200" y="90" text-anchor="middle" fill="white" font-family="Arial" font-size="18">Building &amp; Deployment</text>
+  
+  <!-- Simple pipeline visualization -->
+  <rect x="80" y="120" width="50" height="30" rx="5" fill="white"/>
+  <text x="105" y="140" text-anchor="middle" fill="#f59e0b" font-family="Arial" font-size="12">DATA</text>
+  
+  <line x1="135" y1="135" x2="165" y2="135" stroke="white" stroke-width="3"/>
+  <polygon points="165,130 175,135 165,140" fill="white"/>
+  
+  <circle cx="200" cy="135" r="20" fill="white"/>
+  <text x="200" y="140" text-anchor="middle" fill="#f59e0b" font-family="Arial" font-size="10">ML</text>
+  
+  <line x1="225" y1="135" x2="255" y2="135" stroke="white" stroke-width="3"/>
+  <polygon points="255,130 265,135 255,140" fill="white"/>
+  
+  <rect x="270" y="120" width="50" height="30" rx="5" fill="white"/>
+  <text x="295" y="140" text-anchor="middle" fill="#f59e0b" font-family="Arial" font-size="12">MODEL</text>
+  
+  <!-- Play button -->
+  <circle cx="200" cy="135" r="30" fill="rgba(0,0,0,0.6)"/>
+  <polygon points="190,125 190,145 210,135" fill="white"/>
+  
+  <!-- Badges -->
+  <rect x="320" y="200" width="70" height="25" rx="12" fill="rgba(0,0,0,0.7)"/>
+  <text x="355" y="217" text-anchor="middle" fill="white" font-family="Arial" font-size="12">22 min</text>
+  
+  <rect x="10" y="200" width="90" height="25" rx="12" fill="rgba(239,68,68,0.8)"/>
+  <text x="55" y="217" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Intermediate</text>
+</svg>
