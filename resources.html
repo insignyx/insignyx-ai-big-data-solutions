@@ -148,48 +148,60 @@
       <div class="mb-12">
         <h3 class="text-2xl font-bold mb-6">Popular Video Tutorials</h3>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="bg-white rounded-lg shadow overflow-hidden cursor-pointer video-thumbnail" 
+               onclick="openYouTubeVideo('https://www.youtube.com/watch?v=tcF62_Xhf1s')">
             <div class="relative">
               <img src="images/contextclue-tutorial-thumb.svg" 
-                   alt="ContextClue Tutorial" class="w-full h-40 object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                   alt="Getting Started with AI Tutorial" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center hover:bg-opacity-40 transition-all">
                 <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
                 </svg>
               </div>
+              <div class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                YouTube
+              </div>
             </div>
             <div class="p-4">
-              <h4 class="font-bold mb-1">Getting Started with ContextClue</h4>
-              <p class="text-sm text-gray-600">15 min • Beginner</p>
+              <h4 class="font-bold mb-1">Getting Started with AI</h4>
+              <p class="text-sm text-gray-600">22 min • Beginner</p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="bg-white rounded-lg shadow overflow-hidden cursor-pointer video-thumbnail" 
+               onclick="openYouTubeVideo('https://www.youtube.com/watch?v=Ik2rAKROVbI')">
             <div class="relative">
               <img src="images/ml-pipelines-tutorial-thumb.svg" 
-                   alt="ML Pipelines Tutorial" class="w-full h-40 object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                   alt="Building ML Pipelines Tutorial" class="w-full h-40 object-cover">
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center hover:bg-opacity-40 transition-all">
                 <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
                 </svg>
+              </div>
+              <div class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                YouTube
               </div>
             </div>
             <div class="p-4">
               <h4 class="font-bold mb-1">Building ML Pipelines</h4>
-              <p class="text-sm text-gray-600">22 min • Intermediate</p>
+              <p class="text-sm text-gray-600">26 min • Intermediate</p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="bg-white rounded-lg shadow overflow-hidden cursor-pointer video-thumbnail" 
+               onclick="openYouTubeVideo('https://www.youtube.com/watch?v=MiiANxRHSv4')">
             <div class="relative">
               <img src="images/data-viz-tutorial-thumb.svg" 
                    alt="Data Visualization Tutorial" class="w-full h-40 object-cover">
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center hover:bg-opacity-40 transition-all">
                 <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
                 </svg>
               </div>
+              <div class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                YouTube
+              </div>
             </div>
             <div class="p-4">
-              <h4 class="font-bold mb-1">Data Visualization</h4>
+              <h4 class="font-bold mb-1">Data Visualization Tutorial</h4>
               <p class="text-sm text-gray-600">18 min • Beginner</p>
             </div>
           </div>
@@ -259,6 +271,137 @@
       </div>
     </div>
   </footer>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-screen overflow-auto">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="videoTitle" class="text-xl font-bold"></h3>
+        <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+      </div>
+      <div id="videoContainer" class="relative">
+        <!-- YouTube iframe will be inserted here -->
+      </div>
+      <div class="mt-4 text-center">
+        <button onclick="closeVideoModal()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to open YouTube videos in embedded modal
+    function openYouTubeVideo(youtubeUrl) {
+      console.log('openYouTubeVideo called with URL:', youtubeUrl);
+      
+      // Extract video ID from YouTube URL
+      const videoId = extractYouTubeVideoId(youtubeUrl);
+      if (!videoId) {
+        console.error('Could not extract video ID from URL:', youtubeUrl);
+        return;
+      }
+      
+      // Open the video in embedded modal
+      openEmbeddedVideo(videoId);
+    }
+    
+    // Function to extract YouTube video ID from URL
+    function extractYouTubeVideoId(url) {
+      const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+    
+    // Function to open embedded YouTube video in modal
+    function openEmbeddedVideo(videoId) {
+      const modal = document.getElementById('videoModal');
+      const videoContainer = document.getElementById('videoContainer');
+      const videoTitle = document.getElementById('videoTitle');
+      
+      // Create YouTube embed iframe
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      videoContainer.innerHTML = `
+        <iframe 
+          width="100%" 
+          height="400" 
+          src="${embedUrl}" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          class="rounded-lg">
+        </iframe>
+      `;
+      
+      // Set title based on video ID (you can customize this)
+      const titles = {
+        'tcF62_Xhf1s': 'Getting Started with AI',
+        'Ik2rAKROVbI': 'Building ML Pipelines',
+        'MiiANxRHSv4': 'Data Visualization Tutorial'
+      };
+      videoTitle.textContent = titles[videoId] || 'Video Tutorial';
+      
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Keep the existing modal functionality for potential future use
+    function openVideoModal(videoSrc, title) {
+      const modal = document.getElementById('videoModal');
+      const videoPlayer = document.getElementById('videoPlayer');
+      const videoSource = document.getElementById('videoSource');
+      const videoTitle = document.getElementById('videoTitle');
+      
+      videoSource.src = videoSrc;
+      videoTitle.textContent = title;
+      videoPlayer.load(); // Reload the video element
+      modal.classList.remove('hidden');
+      
+      // Prevent body scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const videoContainer = document.getElementById('videoContainer');
+      
+      // Clear the iframe to stop the video
+      videoContainer.innerHTML = '';
+      modal.classList.add('hidden');
+      
+      // Restore body scrolling
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside the video container
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeVideoModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeVideoModal();
+      }
+    });
+
+    // Add hover effects to video thumbnails
+    document.addEventListener('DOMContentLoaded', function() {
+      const thumbnails = document.querySelectorAll('.video-thumbnail');
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.02)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+        
+        thumbnail.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1)';
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
