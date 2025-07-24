@@ -1,0 +1,73 @@
+# Insignyx AI & Big Data Solutions - LLM Discovery File
+# This file provides information about our AI services and content for LLM discovery
+
+# Company Information
+Company: Insignyx AI & Big Data Solutions
+Website: https://insignyx.com
+Description: Leading provider of AI consulting, generative AI development, and big data solutions for enterprises
+
+# AI Services Offered
+Services:
+- AI Consulting & Strategy
+- Generative AI Development
+- ContextClue Knowledge Management Platform
+- Computer Vision Solutions
+- Data Engineering Services
+- MLOps & Model Deployment
+- Custom AI Model Development
+- Enterprise AI Platform Integration
+
+# Industry Solutions
+Industries:
+- Healthcare AI Solutions
+- Finance & Banking AI
+- Manufacturing & Industrial AI
+- Retail & E-commerce AI
+- Logistics & Supply Chain AI
+
+# Key Products
+Products:
+- ContextClue: AI-powered knowledge management platform
+- AI Document Processor: Intelligent document analysis and processing
+- Enterprise AI Platform: Scalable AI infrastructure for businesses
+- Data Analytics Suite: Advanced analytics and visualization tools
+
+# Technology Stack
+Technologies:
+- Machine Learning & Deep Learning
+- Natural Language Processing (NLP)
+- Computer Vision
+- Big Data Processing (Apache Spark, Hadoop)
+- Cloud Platforms (AWS, Azure, Google Cloud)
+- MLOps Tools and Frameworks
+- Python, TensorFlow, PyTorch
+
+# Content Resources
+Resources:
+- AI Strategy Whitepapers
+- Technical Tutorials and Guides
+- Video Learning Content
+- API Documentation
+- Case Studies and Success Stories
+- Industry Research Papers
+
+# Contact Information
+Contact: https://insignyx.com/contact.html
+Email: info@insignyx.com
+Phone: +1 (555) 123-4567
+
+# AI Ethics and Policies
+AI Ethics: We are committed to responsible AI development and deployment
+Data Privacy: We follow strict data privacy and security protocols
+Compliance: GDPR, CCPA, and industry-specific compliance standards
+
+# Last Updated
+Last-Modified: 2024-12-19
+
+# Additional Information
+For more detailed information about our AI capabilities and services, please visit:
+- Core Capabilities: https://insignyx.com/core-capabilities.html
+- Products: https://insignyx.com/products.html
+- Case Studies: https://insignyx.com/customer-stories.html
+- Resources: https://insignyx.com/resources.html
+- AI Consulting: https://insignyx.com/ai-consulting.html
