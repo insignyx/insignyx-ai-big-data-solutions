@@ -16,6 +16,6 @@ Disallow: /node_modules/
 
 # Allow access to important resources
 Allow: /css/
-Allow: /js/script.js
+Allow: /js/script.min.js
 Allow: /images/
 Allow: /favicon.ico
