@@ -10,6 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.min.css" />
   <script src="js/script.min.js" defer></script>
+  <script src="js/resources.js" defer></script>
   <style>
     .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
     .resource-card { transition: all 0.3s ease; }
@@ -48,69 +49,201 @@
   <section class="gradient-bg text-white py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">AI & Big Data Learning Hub - Development Resources Center</h1>
-      <p class="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">Access comprehensive AI and big data resources including guides, tutorials, best practices, and tools to accelerate your artificial intelligence and machine learning initiatives.</p>
-      <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-200 mb-8 text-center max-w-3xl mx-auto">Access comprehensive AI and big data resources including guides, tutorials, best practices, and tools to accelerate your artificial intelligence and machine learning initiatives.</p>
+      <p class="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8">
         Your central learning hub for AI and big data resources - access tutorials, guides, whitepapers, and other learning materials designed to help you succeed on your AI and big data journey.
       </p>
-    </div>
-  </section>
-
-  <!-- Resource Categories -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- Whitepapers -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Whitepapers</h3>
-          <p class="text-gray-600 mb-4">In-depth technical guides and industry insights</p>
-          <a href="whitepapers.html" class="text-blue-600 font-semibold hover:text-blue-800">Browse →</a>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold">50+</div>
+          <div class="text-sm opacity-90">Learning Resources</div>
         </div>
-
-        <!-- Tutorials -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Tutorials</h3>
-          <p class="text-gray-600 mb-4">Step-by-step guides for implementation</p>
-          <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Start Learning →</a>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold">15+</div>
+          <div class="text-sm opacity-90">Video Tutorials</div>
         </div>
-
-        <!-- Videos -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Video Tutorials</h3>
-          <p class="text-gray-600 mb-4">Visual learning with expert-led videos</p>
-          <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Watch Now →</a>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div class="text-3xl font-bold">24/7</div>
+          <div class="text-sm opacity-90">Access Available</div>
         </div>
-
-        <!-- API Docs -->
-        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-          <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-2">API Documentation</h3>
-          <p class="text-gray-600 mb-4">Complete API reference and examples</p>
-            <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Explore →</a>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <!-- Learning Paths Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Structured Learning Paths</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Follow our curated learning paths designed for different skill levels and career goals. Each path provides a structured approach to mastering AI and big data technologies with hands-on projects, real-world case studies, and expert mentorship.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-blue-100 rounded-lg p-3 mr-4">
+                  <span class="text-2xl">📚</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Beginner Path</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Perfect for newcomers to AI and data science. Start with fundamentals and build a solid foundation through interactive tutorials, practical exercises, and guided projects that introduce core concepts step by step.</p>
+              <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                <li>• Introduction to AI & ML Concepts</li>
+                <li>• Data Analysis Fundamentals</li>
+                <li>• Python for Data Science</li>
+                <li>• Basic Machine Learning Algorithms</li>
+                <li>• Hands-on Projects with Real Data</li>
+                <li>• Industry Best Practices</li>
+              </ul>
+              <div class="mt-4 text-sm text-blue-600 font-semibold">Duration: 4-6 weeks • 25+ Resources</div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-green-100 rounded-lg p-3 mr-4">
+                  <span class="text-2xl">🚀</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Intermediate Path</h3>
+              </div>
+              <p class="text-gray-600 mb-4">For professionals with basic knowledge looking to advance their skills and tackle real-world projects. Dive deeper into advanced techniques, learn industry-standard tools, and work on complex problem-solving scenarios.</p>
+              <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                <li>• Advanced Machine Learning Techniques</li>
+                <li>• Deep Learning & Neural Networks</li>
+                <li>• Big Data Processing with Spark</li>
+                <li>• MLOps & Model Deployment</li>
+                <li>• Cloud Platform Integration</li>
+                <li>• Performance Optimization</li>
+              </ul>
+              <div class="mt-4 text-sm text-green-600 font-semibold">Duration: 6-8 weeks • 35+ Resources</div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-purple-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-purple-100 rounded-lg p-3 mr-4">
+                  <span class="text-2xl">⚡</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Expert Path</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Advanced topics for experienced practitioners ready to lead AI initiatives and drive innovation. Master cutting-edge technologies, develop strategic thinking, and learn to architect enterprise-scale solutions.</p>
+              <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                <li>• AI Strategy & Implementation</li>
+                <li>• Custom Model Architecture Design</li>
+                <li>• Enterprise AI Governance</li>
+                <li>• Cutting-edge Research Applications</li>
+                <li>• Team Leadership & Management</li>
+                <li>• Innovation & Future Trends</li>
+              </ul>
+              <div class="mt-4 text-sm text-purple-600 font-semibold">Duration: 8-12 weeks • 45+ Resources</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resource Categories -->
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Resource Categories</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive collection of learning materials, technical documentation, and practical guides designed to accelerate your AI and big data journey. Each category offers specialized content tailored to different learning preferences and professional needs.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200">
+                <span class="text-3xl">📄</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Whitepapers</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                In-depth research papers, industry insights, and technical analyses covering the latest trends in artificial intelligence, machine learning, and big data technologies. Our whitepapers provide comprehensive coverage of emerging technologies, best practices, implementation strategies, and real-world case studies from leading industry experts and researchers.
+              </p>
+              <div class="mt-4 text-blue-600 font-semibold text-sm">15+ Research Papers Available</div>
+            </div>
+            
+            <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200">
+                <span class="text-3xl">📖</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Tutorials</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Step-by-step guides and hands-on tutorials designed to help you master AI and data science concepts through practical implementation. Our tutorials cover everything from basic programming concepts to advanced machine learning techniques, complete with code examples, datasets, and interactive exercises that you can follow along with.
+              </p>
+              <div class="mt-4 text-green-600 font-semibold text-sm">25+ Interactive Tutorials</div>
+            </div>
+            
+            <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200">
+                <span class="text-3xl">🎥</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Videos</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Engaging video content including webinars, conference talks, product demonstrations, and educational series presented by industry experts and thought leaders. Our video library covers technical deep-dives, strategic insights, implementation walkthroughs, and live Q&A sessions to enhance your learning experience through visual and auditory engagement.
+              </p>
+              <div class="mt-4 text-purple-600 font-semibold text-sm">20+ Hours of Content</div>
+            </div>
+            
+            <div class="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200">
+                <span class="text-3xl">⚙️</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">API Docs</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Comprehensive technical documentation for our APIs, SDKs, and integration tools. Includes detailed endpoint references, authentication guides, code samples in multiple programming languages, error handling procedures, and best practices for seamless integration with your existing systems and workflows.
+              </p>
+              <div class="mt-4 text-orange-600 font-semibold text-sm">Complete API Reference</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resource Benefits Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Resources</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our learning resources are designed with your success in mind, offering practical value and real-world applicability to help you excel in your AI and data science career.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🎯</span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3">Expert-Curated</h3>
+              <p class="text-gray-600 text-sm">All content is carefully selected and reviewed by industry experts with years of practical experience in AI and big data implementations.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🔄</span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3">Always Updated</h3>
+              <p class="text-gray-600 text-sm">Our resources are continuously updated to reflect the latest developments, ensuring you stay current with rapidly evolving technologies.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🛠️</span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3">Practical Focus</h3>
+              <p class="text-gray-600 text-sm">Every resource emphasizes hands-on learning with real-world examples, code samples, and actionable insights you can apply immediately.</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">👥</span>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-3">Community Support</h3>
+              <p class="text-gray-600 text-sm">Join our active community of learners and practitioners for discussions, Q&A sessions, and collaborative learning opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
   <!-- Featured Resources -->
   <section class="py-16 bg-white">
